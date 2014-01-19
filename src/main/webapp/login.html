@@ -1,0 +1,148 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <title>SMARTFLEX - Login - filer</title>
+
+
+    <script type="text/javascript" charset="utf-8" src="../desktop/js/ext-4.0.1/ext-all-dev.js"></script>
+
+
+    <script type="text/javascript">
+
+       Ext.onReady(function(){
+
+           var usuarioInput = Ext.get('usuario');
+           var senhaInput = Ext.get('senha');
+           var enviaBtn = Ext.get('envia');
+
+           enviaBtn.on({'click': {
+
+               fn:
+
+                   function(e, t, eOpts){
+
+
+                       Ext.define('User', {
+                           extend: 'Ext.data.Model',
+                           fields: ['usuario', 'senha'],
+                           proxy: {
+                               type: 'rest',
+                               url : '/login'
+                           },
+                           reader: {
+                               type: 'json',
+                               root: 'data'
+                           },
+
+
+                           writer : {
+                               type: 'json'
+                           }
+                       });
+
+
+
+                       var user = Ext.create('User',{usuario: usuarioInput.getValue(), senha: senhaInput.getValue()});
+
+                       user.save({
+                           success: function(record, operation)
+                           {
+                              var key = operation.response.responseText;
+
+
+                               if(key === "false") {
+                                   return;
+                               }
+
+                              Ext.util.Cookies.set("key",key);
+
+                              window.location.href = "/desktop/desktop";
+
+                           },
+                           failure: function(record, operation)
+                           {
+                               return;
+                           }
+                       });
+
+                   }
+               }
+
+
+            });
+
+       });
+
+
+    </script>
+
+    <style type="text/css">
+
+        body{
+
+            font-family: Verdana;
+        }
+
+        #topo{
+
+            width: 960px;
+            margin: 0 auto;
+
+        }
+
+        #content{
+
+            width: 960px;
+            margin: 0 auto;
+
+        }
+
+        #logo{
+
+            float: left;
+            width: 300px;
+
+        }
+
+        #form-user{
+
+            float: right;
+            width: 600px;
+
+
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div id="topo">
+
+        <div id="logo">
+
+            <img src="desktop/desktop/images/logosmartflex.png" alt="smartflex" />
+        </div>
+
+        <div id="form-user">
+
+            Usu&aacute;rio:<input type="text" id="usuario" />
+            Senha: <input type="password" id="senha" />
+
+            <button id="envia">Enviar</button>
+
+        </div>
+
+    </div>
+
+
+    <div id="content">
+
+
+
+    </div>
+
+</body>
+</html>

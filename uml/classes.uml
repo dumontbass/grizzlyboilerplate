@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Diagram>
+  <ID>JAVA</ID>
+  <OriginalElement />
+  <nodes>
+    <node x="1206.1579861111109" y="238.0">br.org.base.manager.Produto</node>
+    <node x="1928.7604166666665" y="645.0">br.org.base.manager.Inteiro</node>
+    <node x="2228.7604166666665" y="609.5">br.org.base.manager.ItemCompra</node>
+    <node x="406.0" y="1417.0">br.org.base.manager.Configuracao</node>
+    <node x="1353.7604166666665" y="609.5">br.org.base.manager.Promocao</node>
+    <node x="1608.7604166666665" y="633.0">br.org.base.manager.Fracionado</node>
+    <node x="2527.7604166666665" y="657.5">br.org.base.manager.Perda</node>
+    <node x="1786.6857638888887" y="1219.0">br.org.base.manager.Composicao</node>
+    <node x="28.416666666666515" y="190.0">br.org.base.manager.Pessoa</node>
+    <node x="1113.7604166666665" y="645.5">br.org.base.manager.ProdutoVenda</node>
+    <node x="2467.1579861111113" y="872.0">br.org.base.manager.Processado</node>
+    <node x="0.0" y="1417.0">br.org.base.manager.Funcao</node>
+    <node x="2087.157986111111" y="908.0">br.org.base.manager.Compra</node>
+    <node x="997.9201388888889" y="895.5">br.org.base.manager.Venda</node>
+    <node x="715.9201388888889" y="932.5">br.org.base.manager.Pedido</node>
+    <node x="2026.4079861111109" y="178.0">br.org.base.manager.Item</node>
+    <node x="765.0" y="669.5">br.org.base.manager.Mesa</node>
+    <node x="0.0" y="669.5">br.org.base.manager.Funcionario</node>
+    <node x="200.0" y="1417.0">br.org.base.manager.Categoria</node>
+    <node x="191.0" y="669.5">br.org.base.manager.Usuario</node>
+    <node x="385.0" y="597.0">br.org.base.manager.Cliente</node>
+    <node x="649.6666666666665" y="226.5">br.org.base.manager.Comanda</node>
+    <node x="170.91666666666652" y="0.0">br.org.base.manager.Dispositivo</node>
+    <node x="648.0" y="1417.0">br.org.base.manager.NotaFiscal</node>
+  </nodes>
+  <notes />
+  <edges>
+    <edge source="br.org.base.manager.ProdutoVenda" target="br.org.base.manager.Produto">
+      <point x="0.0" y="-64.0" />
+      <point x="1223.2604166666665" y="577.0" />
+      <point x="1301.1579861111109" y="577.0" />
+      <point x="-95.0" y="124.5" />
+    </edge>
+    <edge source="br.org.base.manager.Fracionado" target="br.org.base.manager.Item">
+      <point x="75.0" y="-76.5" />
+      <point x="1833.7604166666665" y="577.0" />
+      <point x="2080.407986111111" y="577.0" />
+      <point x="-162.0" y="184.5" />
+    </edge>
+    <edge source="br.org.base.manager.Usuario" target="br.org.base.manager.Pessoa">
+      <point x="0.0" y="-40.0" />
+      <point x="278.0" y="577.0" />
+      <point x="258.4166666666665" y="577.0" />
+      <point x="0.0" y="172.5" />
+    </edge>
+    <edge source="br.org.base.manager.Inteiro" target="br.org.base.manager.Item">
+      <point x="70.0" y="-64.5" />
+      <point x="2138.7604166666665" y="577.0" />
+      <point x="2188.407986111111" y="577.0" />
+      <point x="-54.0" y="184.5" />
+    </edge>
+    <edge source="br.org.base.manager.Pedido" target="br.org.base.manager.Comanda">
+      <point x="0.0" y="-88.0" />
+      <point x="846.9201388888889" y="852.0" />
+      <point x="927.5" y="852.0" />
+      <point x="927.5" y="577.0" />
+      <point x="895.4999999999998" y="577.0" />
+      <point x="98.33333333333326" y="136.0" />
+    </edge>
+    <edge source="br.org.base.manager.Fracionado" target="br.org.base.manager.Produto">
+      <point x="-75.0" y="-76.5" />
+      <point x="1683.7604166666665" y="577.0" />
+      <point x="1491.1579861111109" y="577.0" />
+      <point x="95.0" y="124.5" />
+    </edge>
+    <edge source="br.org.base.manager.Promocao" target="br.org.base.manager.Produto">
+      <point x="0.0" y="-100.0" />
+      <point x="1471.2604166666665" y="577.0" />
+      <point x="1427.8246527777778" y="577.0" />
+      <point x="31.666666666666742" y="124.5" />
+    </edge>
+    <edge source="br.org.base.manager.Processado" target="br.org.base.manager.ItemCompra">
+      <point x="0.0" y="-148.5" />
+      <point x="2677.1579861111113" y="852.0" />
+      <point x="2461.2604166666665" y="852.0" />
+      <point x="93.0" y="100.0" />
+    </edge>
+    <edge source="br.org.base.manager.Cliente" target="br.org.base.manager.Comanda">
+      <point x="90.0" y="-112.5" />
+      <point x="655.0" y="577.0" />
+      <point x="698.8333333333333" y="577.0" />
+      <point x="-98.33333333333326" y="136.0" />
+    </edge>
+    <edge source="br.org.base.manager.ItemCompra" target="br.org.base.manager.Item">
+      <point x="0.0" y="-100.0" />
+      <point x="2368.2604166666665" y="577.0" />
+      <point x="2296.407986111111" y="577.0" />
+      <point x="54.0" y="184.5" />
+    </edge>
+    <edge source="br.org.base.manager.Perda" target="br.org.base.manager.Item">
+      <point x="0.0" y="-52.0" />
+      <point x="2608.7604166666665" y="577.0" />
+      <point x="2404.407986111111" y="577.0" />
+      <point x="162.0" y="184.5" />
+    </edge>
+    <edge source="br.org.base.manager.Mesa" target="br.org.base.manager.Comanda">
+      <point x="0.0" y="-40.0" />
+      <point x="841.0" y="577.0" />
+      <point x="797.1666666666665" y="577.0" />
+      <point x="0.0" y="136.0" />
+    </edge>
+    <edge source="br.org.base.manager.Pessoa" target="br.org.base.manager.Dispositivo">
+      <point x="0.0" y="-172.5" />
+      <point x="0.0" y="64.0" />
+    </edge>
+    <edge source="br.org.base.manager.Funcionario" target="br.org.base.manager.Pessoa">
+      <point x="0.0" y="-40.0" />
+      <point x="85.5" y="577.0" />
+      <point x="105.08333333333303" y="577.0" />
+      <point x="-153.33333333333337" y="172.5" />
+    </edge>
+    <edge source="br.org.base.manager.Pedido" target="br.org.base.manager.Funcionario">
+      <point x="-87.33333333333326" y="-88.0" />
+      <point x="759.5868055555557" y="852.0" />
+      <point x="85.5" y="852.0" />
+      <point x="0.0" y="40.0" />
+    </edge>
+    <edge source="br.org.base.manager.Pedido" target="br.org.base.manager.Produto">
+      <point x="87.33333333333337" y="-88.0" />
+      <point x="934.2534722222223" y="852.0" />
+      <point x="1031.5607638888887" y="852.0" />
+      <point x="1031.5607638888887" y="567.0" />
+      <point x="1237.8246527777776" y="567.0" />
+      <point x="-158.33333333333337" y="124.5" />
+    </edge>
+    <edge source="br.org.base.manager.Composicao" target="br.org.base.manager.Produto">
+      <point x="-75.0" y="-76.5" />
+      <point x="1861.6857638888887" y="1194.0" />
+      <point x="1343.2604166666665" y="1194.0" />
+      <point x="1343.2604166666665" y="577.0" />
+      <point x="1364.4913194444443" y="577.0" />
+      <point x="-31.66666666666663" y="124.5" />
+    </edge>
+    <edge source="br.org.base.manager.Venda" target="br.org.base.manager.Cliente">
+      <point x="-68.75" y="-125.0" />
+      <point x="1066.670138888889" y="842.0" />
+      <point x="565.0" y="842.0" />
+      <point x="0.0" y="112.5" />
+    </edge>
+    <edge source="br.org.base.manager.Composicao" target="br.org.base.manager.Processado">
+      <point x="75.0" y="-76.5" />
+      <point x="2011.6857638888887" y="1194.0" />
+      <point x="2677.1579861111113" y="1194.0" />
+      <point x="0.0" y="148.5" />
+    </edge>
+    <edge source="br.org.base.manager.Inteiro" target="br.org.base.manager.Produto">
+      <point x="-70.0" y="-64.5" />
+      <point x="1998.7604166666665" y="567.0" />
+      <point x="1554.4913194444443" y="567.0" />
+      <point x="158.33333333333348" y="124.5" />
+    </edge>
+    <edge source="br.org.base.manager.Venda" target="br.org.base.manager.ProdutoVenda">
+      <point x="68.75" y="-125.0" />
+      <point x="1204.170138888889" y="852.0" />
+      <point x="1223.2604166666665" y="852.0" />
+      <point x="0.0" y="64.0" />
+    </edge>
+    <edge source="br.org.base.manager.Compra" target="br.org.base.manager.ItemCompra">
+      <point x="-90.0" y="-112.5" />
+      <point x="2177.157986111111" y="852.0" />
+      <point x="2275.2604166666665" y="852.0" />
+      <point x="-93.0" y="100.0" />
+    </edge>
+    <edge source="br.org.base.manager.Cliente" target="br.org.base.manager.Pessoa">
+      <point x="-90.0" y="-112.5" />
+      <point x="475.0" y="577.0" />
+      <point x="411.7499999999999" y="577.0" />
+      <point x="153.33333333333337" y="172.5" />
+    </edge>
+  </edges>
+  <settings layout="Hierarchic Group" zoom="0.5846852693056457" x="1444.0" y="760.5" />
+  <SelectedNodes />
+  <Categories>
+    <Category>Constructors</Category>
+    <Category>Fields</Category>
+    <Category>Methods</Category>
+    <Category>Inner Classes</Category>
+    <Category>Properties</Category>
+  </Categories>
+  <SCOPE>All</SCOPE>
+  <VISIBILITY>private</VISIBILITY>
+</Diagram>
+

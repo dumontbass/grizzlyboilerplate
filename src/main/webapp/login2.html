@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <title>SMARTFLEX - Login</title>
+
+
+
+    <!--<script type="text/javascript" charset="utf-8" src="desktop/js/ext-4.0.1/ext-all-dev.js"></script>-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
+    <script type="text/javascript">
+
+
+
+
+       /* $(document).ready(function(){
+
+            $('input[type=button]').click(function(){
+
+                var nome = $('input[name=nome]').val();
+
+                var senha = $('input[name=senha]').val();
+
+                console.log(nome);
+
+                console.log(senha);
+
+                $.post('/util/login', {nome: nome, senha: senha}, function(resp){
+
+
+                           console.log(resp)
+                });
+
+            })
+
+
+
+        });
+*/
+       /* Ext.Ajax.request({
+            url: '/util/login',
+            form: 'myForm',
+            success: function(response, opts) {
+                var obj = Ext.decode(response.responseText);
+                console.dir(obj);
+            },
+            failure: function(response, opts) {
+                console.log('server-side failure with status code ' + response.status);
+            }
+        });*/
+
+
+
+    </script>
+
+</head>
+
+<body>
+
+
+
+
+
+    <div>Nome: <input type="text" name="nome" /></div>
+    <div>Senha: <input type="text" name="senha" /></div>
+
+    <input type="button" value="OK" />
+
+
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+Ext.define('MyApp.stores.UserStore', {
+    extend    : 'Ext.data.Store',
+    singleton : true,
+    requires  : ['MyApp.models.Cliente'],
+
+    model     : 'MyApp.models.Cliente',
+//    storeId   : 'MyApp.stores.UserStore',
+
+proxy: {
+            type: 'ajax',
+            api: {
+                create: 'createCliente',
+                read: 'readAllCliente',
+                update: 'updateCliente',
+                destroy: 'deleteCliente'
+
+            },
+            //url: '/readAllCliente',
+            reader: {
+                type: 'json',
+                root: 'data'
+            },
+            writer: {
+                type: 'json'
+            }
+        }
+
+    constructor : function() {
+        this.callParent(arguments);
+        
+    }
+
+});

@@ -1,0 +1,28 @@
+#topo{
+
+    width: 960px;
+    margin: 0 auto;
+
+}
+
+#content{
+
+    width: 960px;
+    margin: 0 auto;
+
+}
+
+#logo{
+
+    float: left;
+    width: 300px;
+
+}
+
+#form-user{
+
+    float: right;
+    width: 300px;
+
+
+}

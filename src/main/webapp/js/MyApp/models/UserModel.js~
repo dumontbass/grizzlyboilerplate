@@ -1,0 +1,21 @@
+Ext.define('Cliente', {
+    extend: 'Ext.data.Model',
+    fields: [{
+        name: '_id',
+        type: 'string',
+        useNull: true
+    }, 'nome', 'rg', 'sobrenome'],
+    validations: [{
+        type: 'length',
+        field: 'nome',
+        min: 1
+    }, {
+        type: 'length',
+        field: 'rg',
+        min: 1
+    }, {
+        type: 'length',
+        field: 'sobrenome',
+        min: 1
+    }]
+});

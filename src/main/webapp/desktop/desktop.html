@@ -1,0 +1,105 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <title>SMARTFLEX - Comanda</title>
+
+    <link rel="stylesheet" type="text/css" href="css/ext-theme-classic-all.css" />
+
+    <script type="text/javascript" charset="utf-8" src="../js/ext-4.0.1/ext-all-dev.js"></script>
+    <script type="text/javascript">
+
+
+        Ext.Loader.setPath({
+            'Ext.ux.desktop': 'js',
+            MyDesktop: '',
+            'MyApp': '../js/MyApp'
+        });
+
+
+        Ext.require(['Ext.data.*', 'Ext.grid.*']);
+
+        Ext.require('MyApp.models.Compra');
+
+        Ext.define('Store', {
+            extend: 'Ext.data.Store',
+            singleton: true,
+            requires: ['MyApp.models.Compra'],
+            autoLoad: true,
+            model: 'MyApp.models.Compra'
+
+
+
+
+        });
+
+
+        Ext.onReady(function () {
+
+            var objToEncode = {
+                foo: "bar",
+                id: 1,
+                today: new Date(),
+                isJson: true,
+                size: ["Small", "Medium", "Large"],
+                        obj: {
+                item: "My Item"
+            }
+        };
+
+
+
+            var compraGrid = Ext.create('MyApp.models.Compra');
+
+            var compraStore = Store
+
+
+
+
+            var el = Ext.get('myElem');
+
+            el.on('click', function(e, target, options){
+
+
+
+                var compra = Ext.create('MyApp.models.Compra', {
+
+                    data: new Date(),
+                    quantidade: 10,
+                    lote: '123',
+                    notaFiscal: '123',
+                    localizacao: '123',
+                    fornecedor: '123',
+                    validade: new Date(),
+                    //item_id : ''
+
+                }) ;
+
+
+
+
+
+                compra.save()
+            }, this);
+
+
+
+
+            console.log(compraStore);
+        });
+
+
+
+        console.log(new Date(1381374000000));
+
+    </script>
+
+
+
+</head>
+<body>
+       <div id="myElem">Ola</div>
+
+</body>
+
+</html>

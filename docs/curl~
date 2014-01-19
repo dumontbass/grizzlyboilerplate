@@ -1,0 +1,5 @@
+App bares
+
+localhost:8081
+
+curl -v localhost:8081/readAllCliente

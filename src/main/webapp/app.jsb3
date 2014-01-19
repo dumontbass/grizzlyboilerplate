@@ -1,0 +1,556 @@
+{
+    "projectName": "Project Name",
+    "licenseText": "Copyright(c) 2012 Company Name",
+    "builds": [
+        {
+            "name": "All Classes",
+            "target": "all-classes.js",
+            "options": {
+                "debug": true
+            },
+            "files": [
+                {
+                    "clsName": "Ext.ux.desktop.ShortcutModel",
+                    "name": "ShortcutModel.js",
+                    "path": "desktop/js/"
+                },
+                {
+                    "clsName": "MyDesktop.Settings",
+                    "name": "Settings.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "Ext.ux.desktop.Desktop",
+                    "name": "Desktop.js",
+                    "path": "desktop/js/"
+                },
+                {
+                    "clsName": "Ext.ux.desktop.Module",
+                    "name": "Module.js",
+                    "path": "desktop/js/"
+                },
+                {
+                    "clsName": "MyApp.views.funcionario.FuncionarioFormPanel",
+                    "name": "FuncionarioFormPanel.js",
+                    "path": "js/MyApp/views/funcionario/"
+                },
+                {
+                    "clsName": "MyApp.views.item.ItemFormPanel",
+                    "name": "ItemFormPanel.js",
+                    "path": "js/MyApp/views/item/"
+                },
+                {
+                    "clsName": "MyApp.views.configuracao.ConfiguracaoFormPanel",
+                    "name": "ConfiguracaoFormPanel.js",
+                    "path": "js/MyApp/views/configuracao/"
+                },
+                {
+                    "clsName": "MyApp.views.pdv.PdvFormPanel",
+                    "name": "PdvFormPanel.js",
+                    "path": "js/MyApp/views/pdv/"
+                },
+                {
+                    "clsName": "Ext.ux.DataTip",
+                    "name": "DataTip.js",
+                    "path": "desktop/js/ext-4.0.1/src/ux/"
+                },
+                {
+                    "clsName": "MyApp.views.pedido.PedidoFormPanel",
+                    "name": "PedidoFormPanel.js",
+                    "path": "js/MyApp/views/pedido/"
+                },
+                {
+                    "clsName": "MyApp.views.categoria.CategoriaFormPanel",
+                    "name": "CategoriaFormPanel.js",
+                    "path": "js/MyApp/views/categoria/"
+                },
+                {
+                    "clsName": "MyApp.views.fornecedor.FornecedorFormPanel",
+                    "name": "FornecedorFormPanel.js",
+                    "path": "js/MyApp/views/fornecedor/"
+                },
+                {
+                    "clsName": "Ext.ux.RowExpander",
+                    "name": "RowExpander.js",
+                    "path": "desktop/js/ext-4.0.1/src/ux/"
+                },
+                {
+                    "clsName": "MyApp.models.Cardapio",
+                    "name": "Cardapio.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.Item",
+                    "name": "Item.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.util.BarcodeGenerator",
+                    "name": "BarcodeGenerator.js",
+                    "path": "js/MyApp/util/"
+                },
+                {
+                    "clsName": "MyApp.models.Compra",
+                    "name": "Compra.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.Produto",
+                    "name": "Produto.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.Venda",
+                    "name": "Venda.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.Pedido",
+                    "name": "Pedido.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.Categoria",
+                    "name": "Categoria.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.Comanda",
+                    "name": "Comanda.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.Fornecedor",
+                    "name": "Fornecedor.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.Pessoa",
+                    "name": "Pessoa.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.ItemCompra",
+                    "name": "ItemCompra.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.ProdutoVenda",
+                    "name": "ProdutoVenda.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.models.Endereco",
+                    "name": "Endereco.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "Ext.ux.desktop.App",
+                    "name": "App.js",
+                    "path": "desktop/js/"
+                },
+                {
+                    "clsName": "MyDesktop.SystemStatus",
+                    "name": "SystemStatus.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyDesktop.VideoWindow",
+                    "name": "VideoWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyDesktop.TabWindow",
+                    "name": "TabWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyDesktop.Notepad",
+                    "name": "Notepad.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyDesktop.BogusModule",
+                    "name": "BogusModule.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyDesktop.BogusMenuModule",
+                    "name": "BogusMenuModule.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyDesktop.PerdasWindow",
+                    "name": "PerdasWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyDesktop.ConfiguracaoWindow",
+                    "name": "ConfiguracaoWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.stores.CompraStore",
+                    "name": "CompraStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.compra.CompraGridPanel",
+                    "name": "CompraGridPanel.js",
+                    "path": "js/MyApp/views/compra/"
+                },
+                {
+                    "clsName": "MyDesktop.CompraWindow",
+                    "name": "CompraWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.stores.ProdutoStore",
+                    "name": "ProdutoStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.stores.ComandaStore",
+                    "name": "ComandaStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.comanda.ComandaGridPanel",
+                    "name": "ComandaGridPanel.js",
+                    "path": "js/MyApp/views/comanda/"
+                },
+                {
+                    "clsName": "MyApp.models.Cliente",
+                    "name": "Cliente.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.stores.ClienteStore",
+                    "name": "ClienteStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.models.Funcionario",
+                    "name": "Funcionario.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.stores.FuncionarioStore",
+                    "name": "FuncionarioStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.funcionario.FuncionarioGridPanel",
+                    "name": "FuncionarioGridPanel.js",
+                    "path": "js/MyApp/views/funcionario/"
+                },
+                {
+                    "clsName": "MyDesktop.FuncionarioWindow",
+                    "name": "FuncionarioWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.stores.CardapioStore",
+                    "name": "CardapioStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.stores.ItemStore",
+                    "name": "ItemStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.item.ItemGridPanel",
+                    "name": "ItemGridPanel.js",
+                    "path": "js/MyApp/views/item/"
+                },
+                {
+                    "clsName": "MyDesktop.ItemWindow",
+                    "name": "ItemWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.stores.ItemComposicaoStore",
+                    "name": "ItemComposicaoStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.produto.ItemsComposicaoGridPanel",
+                    "name": "ItemsComposicaoGridPanel.js",
+                    "path": "js/MyApp/views/produto/"
+                },
+                {
+                    "clsName": "MyApp.models.Composicao",
+                    "name": "Composicao.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.stores.ComposicaoStore",
+                    "name": "ComposicaoStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.produto.ComposicaoGridPanel",
+                    "name": "ComposicaoGridPanel.js",
+                    "path": "js/MyApp/views/produto/"
+                },
+                {
+                    "clsName": "MyApp.views.produto.ComposicaoFormPanel",
+                    "name": "ComposicaoFormPanel.js",
+                    "path": "js/MyApp/views/produto/"
+                },
+                {
+                    "clsName": "MyApp.models.Fracionado",
+                    "name": "Fracionado.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.stores.FracionadoStore",
+                    "name": "FracionadoStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.produto.FracionadoGridPanel",
+                    "name": "FracionadoGridPanel.js",
+                    "path": "js/MyApp/views/produto/"
+                },
+                {
+                    "clsName": "MyApp.views.produto.FracionadoFormPanel",
+                    "name": "FracionadoFormPanel.js",
+                    "path": "js/MyApp/views/produto/"
+                },
+                {
+                    "clsName": "MyApp.models.Inteiro",
+                    "name": "Inteiro.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.stores.InteiroStore",
+                    "name": "InteiroStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.produto.InteiroGridPanel",
+                    "name": "InteiroGridPanel.js",
+                    "path": "js/MyApp/views/produto/"
+                },
+                {
+                    "clsName": "MyApp.views.produto.InteiroFormPanel",
+                    "name": "InteiroFormPanel.js",
+                    "path": "js/MyApp/views/produto/"
+                },
+                {
+                    "clsName": "MyDesktop.ProdutoWindow",
+                    "name": "ProdutoWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.models.Processado",
+                    "name": "Processado.js",
+                    "path": "js/MyApp/models/"
+                },
+                {
+                    "clsName": "MyApp.stores.ProcessadoStore",
+                    "name": "ProcessadoStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.processado.ProcessadoFormPanel",
+                    "name": "ProcessadoFormPanel.js",
+                    "path": "js/MyApp/views/processado/"
+                },
+                {
+                    "clsName": "MyApp.views.processado.ProcessadoGridPanel",
+                    "name": "ProcessadoGridPanel.js",
+                    "path": "js/MyApp/views/processado/"
+                },
+                {
+                    "clsName": "MyDesktop.ProcessadosWindow",
+                    "name": "ProcessadosWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.stores.ProdutoVendaStore",
+                    "name": "ProdutoVendaStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.pdv.ItemsVendaGridPanel",
+                    "name": "ItemsVendaGridPanel.js",
+                    "path": "js/MyApp/views/pdv/"
+                },
+                {
+                    "clsName": "MyDesktop.PdvWindow",
+                    "name": "PdvWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.views.cardapio.ProdutosCardapioGridPanel",
+                    "name": "ProdutosCardapioGridPanel.js",
+                    "path": "js/MyApp/views/cardapio/"
+                },
+                {
+                    "clsName": "MyApp.views.cardapio.CardapioFormPanel",
+                    "name": "CardapioFormPanel.js",
+                    "path": "js/MyApp/views/cardapio/"
+                },
+                {
+                    "clsName": "MyApp.views.cardapio.CardapioGridPanel",
+                    "name": "CardapioGridPanel.js",
+                    "path": "js/MyApp/views/cardapio/"
+                },
+                {
+                    "clsName": "MyDesktop.CardapioWindow",
+                    "name": "CardapioWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.stores.VendaStore",
+                    "name": "VendaStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.venda.VendaGridPanel",
+                    "name": "VendaGridPanel.js",
+                    "path": "js/MyApp/views/venda/"
+                },
+                {
+                    "clsName": "MyDesktop.VendaWindow",
+                    "name": "VendaWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.stores.PedidoStore",
+                    "name": "PedidoStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.pedido.PedidoGridPanel",
+                    "name": "PedidoGridPanel.js",
+                    "path": "js/MyApp/views/pedido/"
+                },
+                {
+                    "clsName": "MyDesktop.PedidoWindow",
+                    "name": "PedidoWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.stores.CategoriaStore",
+                    "name": "CategoriaStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.categoria.CategoriaGridPanel",
+                    "name": "CategoriaGridPanel.js",
+                    "path": "js/MyApp/views/categoria/"
+                },
+                {
+                    "clsName": "MyDesktop.CategoriaWindow",
+                    "name": "CategoriaWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.views.comanda.PedidoComandaGridPanel",
+                    "name": "PedidoComandaGridPanel.js",
+                    "path": "js/MyApp/views/comanda/"
+                },
+                {
+                    "clsName": "MyApp.views.comanda.ComandaFormPanel",
+                    "name": "ComandaFormPanel.js",
+                    "path": "js/MyApp/views/comanda/"
+                },
+                {
+                    "clsName": "MyDesktop.ComandaWindow",
+                    "name": "ComandaWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.stores.FornecedorStore",
+                    "name": "FornecedorStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.fornecedor.FornecedorGridPanel",
+                    "name": "FornecedorGridPanel.js",
+                    "path": "js/MyApp/views/fornecedor/"
+                },
+                {
+                    "clsName": "MyDesktop.FornecedorWindow",
+                    "name": "FornecedorWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyApp.stores.EnderecoStore",
+                    "name": "EnderecoStore.js",
+                    "path": "js/MyApp/stores/"
+                },
+                {
+                    "clsName": "MyApp.views.cliente.EnderecoClienteGridPanel",
+                    "name": "EnderecoClienteGridPanel.js",
+                    "path": "js/MyApp/views/cliente/"
+                },
+                {
+                    "clsName": "MyApp.views.cliente.ClienteFormPanel",
+                    "name": "ClienteFormPanel.js",
+                    "path": "js/MyApp/views/cliente/"
+                },
+                {
+                    "clsName": "MyApp.views.cliente.ClienteGridPanel",
+                    "name": "ClienteGridPanel.js",
+                    "path": "js/MyApp/views/cliente/"
+                },
+                {
+                    "clsName": "MyDesktop.ClienteWindow",
+                    "name": "ClienteWindow.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "MyDesktop.App",
+                    "name": "App.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "Ext.ux.desktop.Wallpaper",
+                    "name": "Wallpaper.js",
+                    "path": "desktop/js/"
+                },
+                {
+                    "clsName": "MyDesktop.WallpaperModel",
+                    "name": "WallpaperModel.js",
+                    "path": "desktop/"
+                },
+                {
+                    "clsName": "Ext.ux.desktop.Video",
+                    "name": "Video.js",
+                    "path": "desktop/js/"
+                },
+                {
+                    "clsName": "Ext.ux.desktop.StartMenu",
+                    "name": "StartMenu.js",
+                    "path": "desktop/js/"
+                },
+                {
+                    "clsName": "Ext.ux.desktop.TaskBar",
+                    "name": "TaskBar.js",
+                    "path": "desktop/js/"
+                }
+            ]
+        },
+        {
+            "name": "Application - Production",
+            "target": "app-all.js",
+            "compress": true,
+            "files": [
+                {
+                    "path": "",
+                    "name": "all-classes.js"
+                },
+                {
+                    "path": "",
+                    "name": "app.js"
+                }
+            ]
+        }
+    ],
+    "resources": []
+}

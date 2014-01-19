@@ -1,0 +1,103 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+    <title>-- SMARTFLEX - Comanda --</title>
+
+    <link rel="stylesheet" type="text/css" href="desktop/css/ext-theme-classic-all.css" />
+    <link rel="stylesheet" type="text/css" href="desktop/css/desktop.css" />
+     <!--<script type="text/javascript" charset="utf-8" src="desktop/js/ext-4.0.1/ext-all-dev.js"></script>-->
+
+
+
+      <script type="text/javascript" charset="utf-8" src="desktop/js/ext-4.0.1/ext-all-42.js"></script>
+
+   <script type="text/javascript">
+       Ext.Loader.setPath({
+           enabled: true,
+           'Ext.ux.desktop': 'desktop/js',
+           MyDesktop: 'desktop',
+           'MyApp': 'js/MyApp'
+           //'Ext.ux': 'js/ext-4.0.1/ux'
+       });
+
+
+
+       Ext.require('MyDesktop.App');
+
+       var myDesktopApp;
+
+
+       Ext.onReady(function () {
+
+           if(Ext.util.Cookies.get("key") != null && Ext.util.Cookies.get("key") == "{logado:123}"){
+
+               myDesktopApp = new MyDesktop.App();
+
+           }else{
+
+               window.location.href = "/login";
+           }
+
+
+       });
+
+
+       function moneyBRL(v){
+
+           return "R$ "+parseFloat(Math.round(v * 100) / 100).toFixed(2).replace(".",",");
+
+       }
+
+
+       function moneyFormat(v){
+
+           return parseFloat(Math.round(v * 100) / 100).toFixed(2).replace(".",",");
+
+       }
+
+
+       function weightFormat(v){
+
+           return parseFloat(Math.round(v * 100) / 100).toFixed(3).replace(".",",");
+
+       }
+
+
+       function dateFormat(d){
+
+           if( d === '' || d == null) return '';
+
+           return Ext.Date.format(new Date(d),'d/m/Y');
+       }
+
+       Number.prototype.formatMoney = function(c, d, t){
+           var n = this,
+                   c = isNaN(c = Math.abs(c)) ? 2 : c,
+                   d = d == undefined ? "." : d,
+                   t = t == undefined ? "," : t,
+                   s = n < 0 ? "-" : "",
+                   i = parseInt(n = Math.abs(+n || 0).toFixed(c)) + "",
+                   j = (j = i.length) > 3 ? j % 3 : 0;
+           //return s + (j ? i.substr(0, j) + t : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + t) + (c ? d + Math.abs(n - i).toFixed(c).slice(2) : "");
+
+           return n.toFixed(2).replace(/(\d)(?=(\d{3})+\.)/g, "$1,");
+       };
+
+
+   </script>
+   <!-- </x-compile> -->
+</head>
+
+<body>
+
+
+
+<a href="http://www.google.com" target="_blank" alt="Powered by Ext JS"
+   id="poweredby"><div></div></a>
+
+
+    <div style="position: fixed;top:10px;right: 10px;color:red" id="mensagemErro"></div>
+
+</body>
+</html>

@@ -1,0 +1,52 @@
+Ext.define('MyApp.models.Cliente', {
+    extend    : 'Ext.data.Model',
+    singleton : true,
+    requires  : ['MyApp.models.Cliente'],
+
+    model     : 'MyApp.models.Cliente',
+//    storeId   : 'MyApp.stores.UserStore',
+
+proxy: {
+            type: 'ajax',
+            api: {
+                create: 'createCliente',
+                read: 'readAllCliente',
+                update: 'updateCliente',
+                destroy: 'deleteCliente'
+
+            },
+            //url: '/readAllCliente',
+            reader: {
+                type: 'json',
+                root: 'data'
+            },
+            writer: {
+                type: 'json'
+            }
+        }
+/*
+    constructor : function() {
+        this.callParent(arguments);
+        this.loadData([
+            {
+                firstName : 'Louis',
+                lastName  : 'Dobbs',
+                dob       : '12/21/34',
+                userName  : 'ldobbs'
+            },
+            {
+                firstName : 'Sam',
+                lastName  : 'Hart',
+                dob       : '03/23/54',
+                userName  : 'shart'
+            },
+            {
+                firstName : 'Nancy',
+                lastName  : 'Garcia',
+                dob       : '01/18/24',
+                userName  : 'ngarcia'
+            }
+        ]);
+    }
+
+});

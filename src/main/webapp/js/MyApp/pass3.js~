@@ -1,0 +1,26 @@
+(function() {
+    var cfg = Ext.Loader.getConfig();
+    cfg.enabled = true;
+    Ext.Loader.setConfig(cfg);
+    Ext.Loader.setPath('MyApp', 'js/MyApp');
+
+    Ext.require('MyApp.views.UserEditorWindow');
+
+    Ext.onReady(function() {
+        Ext.create('MyApp.views.UserEditorWindow').show();
+Ext.create('widget.window', {
+        height: 500,
+        width: 800,
+        x: 10,
+        y: 10,
+        title: 'Clientes',
+        closable: true,
+        minimizable: true,
+        plain: true,
+        layout: 'fit',
+        items: [ {
+            border: true
+        }]
+    });
+    });
+})();

@@ -1,0 +1,703 @@
+
+#poweredby {
+    position: absolute;
+    bottom: 55px;
+    right: 20px;
+    z-index: 15000;
+
+    /* IE 5-7 */
+    filter: alpha(opacity=70);
+    /* Netscape */
+    -moz-opacity: 0.9;
+    /* Safari 1.x */
+    -khtml-opacity: 0.9;
+    /* Good browsers */
+    opacity: 0.9;
+}
+
+#poweredby div {
+    position: relative;
+    width: 150px;
+    height: 50px;
+    background-image: url(../images/logosmartflex.png);
+    background-repeat: no-repeat;
+}
+
+/* The simple background image PNG does not work in IE6-8, but does in IE9 */
+.x-ie6 #poweredby div,
+.x-ie7 #poweredby div,
+.x-ie8 #poweredby div {
+    background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/logosmartflex.png', sizingMethod='scale');
+}
+
+/*----------------------------------------------------
+    Start Button
+*/
+
+.ux-start-button-icon {
+    background-image: url(../images/taskbar/sencha.gif) !important;
+    background-color: transparent;
+}
+
+.ux-start-button .x-btn-arrow {
+    background-image: none;
+}
+
+.ux-start-button .x-btn-arrow-right {
+    padding-left: 10px;
+}
+
+.ux-taskbar {
+    padding-left: 4px !important;
+}
+
+/*
+    Start Button (Black)
+*/
+
+.ux-desktop-black .ux-start-button {
+    height: 28px;
+    padding: 0px;
+    display: block;
+}
+
+.ux-desktop-black .ux-start-button em {
+    margin-top: 5px;
+}
+
+.ux-desktop-black .ux-start-button .x-btn-inner {
+    color: black;
+    font-size:11px;
+    font-weight: bold;
+}
+
+.ux-desktop-black .ux-start-button {
+    background-image: -moz-linear-gradient(center top , #E4F3FF, #D9EDFF 48%, #C2D8F2 52%, #C6DCF6);
+    border-radius: 8px 8px 8px 8px;
+    border-color: #81A4D0;
+}
+
+/*----------------------------------------------------
+    Start Menu
+*/
+
+.ux-start-menu-toolbar .x-btn-inner {
+    text-align: left;
+}
+
+.ux-start-menu-toolbar {
+    padding: 4px !important;
+}
+
+/*----------------------------------------------------
+    TaskBar
+*/
+
+.ux-taskbar .x-toolbar {
+    background: transparent none;
+    border-color: transparent;
+}
+
+.x-ie6 .ux-taskbar .x-toolbar {
+    border-color: #d3e1f1;
+}
+
+.ux-desktop-windowbar .x-btn-inner,
+.x-nbr .ux-desktop-windowbar .x-btn-icon-text-left button {
+    text-align: left !important;
+}
+
+.ux-taskbar .x-toolbar {
+    height: 28px;
+}
+
+.ux-taskbar {
+    height: 28px;
+    padding: 0;
+}
+
+.x-toolbar .x-toolbar {
+    padding: 0;
+}
+
+/*
+    TaskBar (Black)
+*/
+
+.ux-desktop-black .ux-taskbar {
+    background: transparent url('../images/taskbar/black/taskbar-start-panel-bg.gif') repeat-x left top;
+    border-color: transparent;
+    /*height: 30px;*/
+}
+
+.ux-desktop-black .ux-taskbar .x-splitter {
+    background: transparent url(../images/taskbar/black/taskbar-split-h.gif) no-repeat scroll 0 -2px;
+}
+
+.ux-desktop-black .ux-taskbar .x-toolbar-text {
+    color: white !important;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-default-toolbar-small-over {
+    background-color: yellow;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-inner {
+    color: white;
+}
+
+.ux-desktop-black .ux-taskbar .x-btn-pressed .x-btn-inner, .ux-taskbar .x-btn-over .x-btn-inner {
+    color: black;
+}
+
+/*----------------------------------------------------
+    Tray Clock
+*/
+
+.ux-desktop-trayclock {
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/*----------------------------------------------------
+    Desktop DataView
+*/
+
+.ux-wallpaper {
+    background-color: #3d71b8;
+}
+
+.ux-wallpaper-tiled {
+    background-repeat: repeat;
+}
+
+.ux-desktop-shortcut {
+    cursor: pointer;
+    text-align: center;
+    padding: 8px;
+    margin: 8px;
+    width: 64px;
+}
+
+.ux-desktop-shortcut-icon {
+    width: 48px;
+    height: 48px;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
+
+.ux-desktop-shortcut-text {
+    font: normal 10px tahoma,arial,verdana,sans-serif;
+    text-decoration: none;
+    padding-top: 5px;
+    color: white;
+}
+
+.x-view-over .ux-desktop-shortcut-text {
+    text-decoration: underline;
+}
+
+
+/*----------------------------------------------------
+    Various icon classes
+*/
+
+
+
+/* -- Shortcut   ------------------------------------------------   */
+
+.clientes-shortcut {
+    background-image: url(../images/clientes.png);
+}
+
+.cpu-shortcut {
+    background-image: url(../images/statusLarge.png);
+}
+
+.produtos-shortcut {
+    background-image: url(../images/produtos.png);
+}
+
+.item-shortcut {
+    background-image: url(../images/item.png);
+
+}
+
+.cardapios-shortcut {
+    background-image: url(../images/cardapio.png);
+}
+
+.funcionarios-shortcut {
+    background-image: url(../images/funcionarios.png);
+}
+
+.compra-shortcut {
+    background-image: url(../images/compra.png);
+}
+
+.processados-shortcut{
+    background-image: url(../images/processados.png);
+}
+
+.perdas-shortcut{
+    background-image: url(../images/perdas.png);
+}
+
+.configuracao-shortcut{
+    background-image: url(../images/configuracoes.png);
+}
+
+.pdv-shortcut{
+    background-image: url(../images/pdv.png);
+}
+
+.venda-shortcut{
+    background-image: url(../images/venda.png);
+}
+
+.notepad-shortcut {
+    background-image: url(../images/notepadLarge.png);
+    width: 46px;
+    height: 46px;
+}
+
+.categoria-shortcut{
+    background-image: url(../images/categorias.png);
+}
+
+.pedido-shortcut {
+    background-image: url(../images/pedido.png);
+
+}
+
+.comanda-shortcut {
+    background-image: url(../images/comanda.png);
+
+}
+
+.fornecedor-shortcut {
+    background-image: url(../images/fornecedor.png);
+
+}
+
+/* -- Icons   ------------------------------------------------   */
+
+.item-icon{
+    background-image: url(../images/item-icon.png);
+}
+
+.perda-icon{
+    background-image: url(../images/perda-icon.png);
+}
+
+.funcionario-icon{
+    background-image: url(../images/funcionario-icon.png);
+}
+
+.cliente-icon{
+    background-image: url(../images/cliente-icon.png);
+}
+
+.processado-icon{
+    background-image: url(../images/processados-icon.png);
+}
+
+.compra-icon{
+    background-image: url(../images/compra-icon.png);
+}
+
+.produto-icon{
+    background-image: url(../images/produto-icon.png);
+}
+
+.cardapio-icon{
+    background-image: url(../images/cardapio-icon.png);
+}
+
+.pdv-icon{
+    background-image: url(../images/pdv-icon.png);
+}
+
+.categoria-icon{
+    background-image: url(../images/categorias-icon.png);
+}
+
+.pedido-icon{
+    background-image: url(../images/pedido-icon.png);
+
+}
+
+.comanda-icon{
+    background-image: url(../images/comanda-icon.png);
+
+}
+
+.fornecedor-icon{
+    background-image: url(../images/fornecedor-icon.png);
+
+}
+
+
+.venda-icon{
+    background-image: url(../images/venda-icon.png);
+
+}
+
+
+.x-ie6 .clientes-shortcut {
+    background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/clientes.png', sizingMethod='scale');
+}
+
+.x-ie6 .cpu-shortcut {
+    background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/statusLarge.png', sizingMethod='scale');
+}
+
+.x-ie6 .produtos-shortcut {
+    background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/produtos.png', sizingMethod='scale');
+}
+
+.x-ie6 .notepad-shortcut {
+    background-image: none;
+    filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='images/notepadLarge.png', sizingMethod='scale');
+}
+
+.video {
+    background-image: url(../images/gears.gif);
+}
+
+.bogus {
+    background-image: url( ../images/bogus.png ) !important;
+}
+
+.notepad {
+    background-image: url( ../images/bogus.png ) !important;
+}
+
+.logout {
+    background-image: url( ../images/logout.gif ) !important;
+}
+
+.settings {
+    background-image: url( ../images/gears.gif ) !important;
+}
+
+
+.icon-grid {
+    background-image:url( ../images/grid.png ) !important;
+}
+
+
+.accordion {
+    background-image:url(../images/accordian.gif) !important;
+}
+.tabs {
+    background-image:url(../images/tabs.gif) !important;
+}
+
+
+.add-icon{
+    background-image: url(../images/add.png) !important;
+}
+
+/*----------------------------------------------------
+    IM window icons
+*/
+
+
+
+.x-boundlist-item{
+    font-family: sans-serif;
+}
+
+
+.x-action-col-icon{
+    cursor: pointer;
+}
+
+.x-boundlist-item{
+    font-size: 12px;
+}
+
+/**/
+
+.x-datepicker {
+    border: 1px solid #6F7275;
+    background-color: #ffffb9;
+    position: relative;
+    width: 299px;
+    padding-right: 0px;
+}
+
+
+/* Grid  */
+
+.grid-row .x-grid-row .x-grid-cell {
+    background-color: #fff;
+    color: #000;
+}
+
+.grid-row .x-grid-row-alt .x-grid-cell {
+    background-color: #ffe5c1;
+    color: #888888;
+}
+
+
+.grid-row .x-grid-row-selected {
+    background-color: #33cc44;
+}
+
+.rowexpanderGrid{
+
+}
+
+.rowexpanderGrid th{
+    padding: 10px;
+    text-align: left;
+}
+.rowexpanderGrid td{
+    padding: 6px;
+    text-align: left;
+}
+
+
+
+
+.rowexpanderGrid tr:nth-child(even){
+    background: #dddcad;
+}
+
+.tabela_combo_item_compra tr:nth-child(even){
+    background: #ddd4a6;
+}
+
+.tabela_combo_item_compra td{
+
+    padding: 4px;
+}
+
+
+/* --------------- ))))))))))))))))))))))))) >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> ****************************/
+
+.barcode {
+    color: black;
+
+    position: relative;
+    height: 70px;
+    font-size: .75em;
+    width: 150px;
+    padding-left: 8px;
+}
+
+
+.quietZone , .leader, .separator , .trailer {
+    float: left;
+    height: 86%;
+}
+
+
+.digit {
+    float: left;
+    height: 80%;
+}
+
+
+.bitOn , .bitOff {
+    float: left;
+    height: 92%;
+}
+
+
+.bitOn {
+    width: 0;
+    border-left: .15em solid black;
+    background-color: #000000;
+}
+
+
+.bitOff {
+    width: .15em;
+    background-color: #FFFFFF;
+}
+
+
+.codeDisplay {
+    font-family: "Courier New", monospace;
+    font-size: 11px;
+    position: absolute;
+    color: black;
+
+    top: 75%;
+}
+
+
+.EAN-13_countryCode {
+    left: 1%;
+}
+
+
+.EAN-13_group1 {
+    left: 8%;
+}
+
+
+.EAN-13_group2 {
+    left: 43%;
+}
+
+
+/*  produto */
+
+
+
+
+
+/*  icons */
+
+#containerIcons{
+
+    height: 600px;
+    width: 280px;
+}
+
+#containerIcons > div{
+
+    float: left;
+    margin-right: 20px;
+}
+
+
+.x-column-header-text{
+
+    font-weight: bold !important;
+    color: #333;
+}
+
+.x-grid-cell{
+    font-size: 13px !important;
+    color: #222;
+}
+
+.x-form-item-label{
+    font-weight: bold;
+    color: #232;
+}
+
+
+/* ----------------------- PDV ---------------------------------------------------------*/
+
+
+
+.comboProduto{
+
+    height: 50px; !important;
+}
+
+.comboProduto input{
+
+    height: 40px !important;
+    font-size: 26px;
+    font-weight: bold;
+    color: #323232;
+}
+
+.vendaPDV {
+
+    margin-top: 10px;
+}
+
+.totalFieldPDV{
+
+    color: green;
+    font-size: 20px;
+    font-weight:bold;
+
+
+}
+
+.totalFieldPDV{
+
+    height: 32px  !important;
+    border-radius: 2px;
+
+
+}
+
+.totalLabelPDV{
+    font-weight:bold;
+    font-size: 20px;
+    padding: 10px;
+    color: #272727;
+}
+
+.btnFinalizaPedido{
+
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+
+    padding: 5px;
+    float: right;
+    margin-right: 14px;
+    margin-top: 27px;
+}
+
+.btnFinalizaPedido .x-btn-inner{
+
+    font-weight: bold;
+    font-size: 12px;
+}
+
+
+.labelComboItemCompraPdv{
+
+    font-size: 18px;
+    font-weight: bold;
+    color: #1b376c;
+}
+
+.labelQtdItemCompraPdv{
+    font-size: 18px;
+    font-weight: bold;
+    color: #1b376c;
+
+}
+
+.fieldQtdItemCompraPdv{
+
+    height: 40px !important;
+    font-size: 26px;
+    font-weight: bold;
+    color: #323232;
+
+}
+
+.fieldComboItemCompraPdv{
+
+    height: 50px;
+}
+
+.x-fieldset {
+    border: 1px solid #b5b8c8;
+    padding: 0 10px;
+    margin: 0 0 10px;
+    border-radius: 4px;
+}
+
+
+.dadosClienteContainer  .x-form-display-field{
+
+    background: #dddcad !important;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.itens_composicao:nth-child(even){
+
+    background: red !important;
+}
