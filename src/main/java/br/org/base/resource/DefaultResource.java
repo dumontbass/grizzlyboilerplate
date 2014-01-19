@@ -34,27 +34,44 @@ public class DefaultResource {
     
 
     @GET
-    @Produces(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.TEXT_HTML)
     public String findAll() {
 
-        String a = "ss";
+        String a = "<svg xmlns=\"http://www.w3.org/2000/svg\" "+
+    "xmlns:xlink=\"http://www.w3.org/1999/xlink\"> "+
+    
+    "<rect x=\"10\" y=\"10\" height=\"110\" width=\"110\" "+
+         "style=\"stroke:#ff0000; fill: #0000ff\"> "+
+     
+        "<animateTransform "+
+            "attributeName=\"transform\" "+
+            "begin=\"0s\" "+
+            "dur=\"12s\" "+
+            "type=\"rotate\" "+
+            "from=\"0 60 60\" "+
+            "to=\"360 60 60\" "+
+            "repeatCount=\"indefinite\"  "+
+        "/> "+
+    "</rect> "+
+
+    "<rect x=\"20\" y=\"20\" height=\"110\" width=\"110\" "+
+         "style=\"stroke:#aa0000; fill: #cc0000\"> "+
+     
+        "<animateTransform "+
+            "attributeName=\"transform\" "+
+            "begin=\"5s\" "+
+            "dur=\"8s\" "+
+            "type=\"rotate\" "+
+            "from=\"360 60 60\" "+
+            "to=\"0 60 60\" "+
+            "repeatCount=\"indefinite\"  "+
+        "/> "+
+    "</rect> "+
+
+"</svg>";
 
 
-        for(int i=0;i<1000;i++){
-
-            for(int j=0;j<1000;j++){
-
-
-                if(i+j==i*j){
-
-                    a = i +"  "+ j;
-                }
-
-
-            
-            }
-
-        }
+       
 
 
         return a;

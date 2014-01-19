@@ -1,0 +1,657 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGILL (0x4) at pc=0xb6db9e10, pid=5538, tid=3065469760
+#
+# JRE version: Java(TM) SE Runtime Environment (7.0_40-b43) (build 1.7.0_40-b43)
+# Java VM: Java HotSpot(TM) Client VM (24.0-b56 mixed mode linux-x86 )
+# Problematic frame:
+# V  [libjvm.so+0x200e10]  Events::log_exception(Thread*, char const*, ...)+0x20
+#
+# Failed to write core dump. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   http://bugreport.sun.com/bugreport/crash.jsp
+#
+
+---------------  T H R E A D  ---------------
+
+Current thread (0xb6a09400):  JavaThread "main" [_thread_in_vm, id=5539, stack(0xb6b25000,0xb6b76000)]
+
+siginfo:si_signo=SIGILL: si_errno=0, si_code=2 (ILL_ILLOPN), si_addr=0xb6db9e10
+
+Registers:
+EAX=0x00000000, EBX=0xb714d868, ECX=0xb6a048a8, EDX=0x00000000
+ESP=0xb6b727b0, EBP=0xb6b727d8, ESI=0xb6a048a8, EDI=0xb6a04c60
+EIP=0xb6db9e10, EFLAGS=0x00010282, CR2=0x00000000
+
+Top of Stack: (sp=0xb6b727b0)
+0xb6b727b0:   b6a09400 00000000 c98a222d 3fde601b
+0xb6b727c0:   a0790f58 b6a048a8 b7111474 b714d868
+0xb6b727d0:   00000000 b091a738 b6b72ad8 b6ee380b
+0xb6b727e0:   b6a09400 b70fe507 a0c0af30 b7111474
+0xb6b727f0:   000004dc b6b72a1c b6a09b80 b6a09b80
+0xb6b72800:   b6b72890 b6b72828 b6a09400 b6a09b74
+0xb6b72810:   b6b72890 00000001 b6a09b78 b6f6aa5e
+0xb6b72820:   b714d868 07000000 b6b72b38 b499139a 
+
+Instructions: (pc=0xb6db9e10)
+0xb6db9df0:   55 89 e5 57 56 53 83 ec 1c e8 00 00 00 00 5b 81
+0xb6db9e00:   c3 6a 3a 39 00 8b 83 10 f2 ff ff 80 38 00 75 08
+0xb6db9e10:   8d 65 f4 5b 5e 5f 5d c3 8b 83 d4 fa ff ff 8d 7d
+0xb6db9e20:   10 8b 30 8b 83 3c ea ff ff 8b 00 85 c0 75 e1 e8 
+
+Register to memory mapping:
+
+EAX=0x00000000 is an unknown value
+EBX=0xb714d868: <offset 0x594868> in /usr/local/java/jre1.7.0_40/lib/i386/client/libjvm.so at 0xb6bb9000
+ECX=0xb6a048a8 is an unknown value
+EDX=0x00000000 is an unknown value
+ESP=0xb6b727b0 is pointing into the stack for thread: 0xb6a09400
+EBP=0xb6b727d8 is pointing into the stack for thread: 0xb6a09400
+ESI=0xb6a048a8 is an unknown value
+EDI=0xb6a04c60 is an unknown value
+
+
+Stack: [0xb6b25000,0xb6b76000],  sp=0xb6b727b0,  free space=309k
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [libjvm.so+0x200e10]  Events::log_exception(Thread*, char const*, ...)+0x20
+V  [libjvm.so+0x32a80b]  JVM_DoPrivileged+0x4eb
+C  [libjava.so+0x9a4a]  Java_java_security_AccessController_doPrivileged__Ljava_security_PrivilegedExceptionAction_2Ljava_security_AccessControlContext_2+0x3a
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.net.URLClassLoader.findClass(Ljava/lang/String;)Ljava/lang/Class;+13
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+70
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+38
+j  sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+36
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+3
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x2a7875]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x315
+V  [libjvm.so+0x3fa1e9]  os::os_exception_wrapper(void (*)(JavaValue*, methodHandle*, JavaCallArguments*, Thread*), JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x19
+V  [libjvm.so+0x2a64ef]  JavaCalls::call(JavaValue*, methodHandle, JavaCallArguments*, Thread*)+0x2f
+V  [libjvm.so+0x2a672a]  JavaCalls::call_virtual(JavaValue*, KlassHandle, Symbol*, Symbol*, JavaCallArguments*, Thread*)+0x10a
+V  [libjvm.so+0x2a67f5]  JavaCalls::call_virtual(JavaValue*, Handle, KlassHandle, Symbol*, Symbol*, Handle, Thread*)+0x55
+V  [libjvm.so+0x49e559]  SystemDictionary::load_instance_class(Symbol*, Handle, Thread*)+0x489
+V  [libjvm.so+0x49cc52]  SystemDictionary::resolve_instance_class_or_null(Symbol*, Handle, Handle, Thread*)+0x742
+V  [libjvm.so+0x49d0b9]  SystemDictionary::resolve_or_null(Symbol*, Handle, Handle, Thread*)+0x49
+V  [libjvm.so+0x49d488]  SystemDictionary::resolve_super_or_fail(Symbol*, Symbol*, Handle, Handle, bool, Thread*)+0x1a8
+V  [libjvm.so+0x17235d]  ClassFileParser::parse_interfaces(constantPoolHandle, int, Handle, Handle, Symbol*, Thread*)+0x13d
+V  [libjvm.so+0x177c08]  ClassFileParser::parseClassFile(Symbol*, Handle, Handle, KlassHandle, GrowableArray<Handle>*, TempNewSymbol&, bool, Thread*)+0xd18
+V  [libjvm.so+0x49bb5a]  SystemDictionary::resolve_from_stream(Symbol*, Handle, Handle, ClassFileStream*, bool, Thread*)+0xda
+V  [libjvm.so+0x32ae04]  jvm_define_class_common(JNIEnv_*, char const*, _jobject*, signed char const*, int, _jobject*, char const*, unsigned char, Thread*)+0x2a4
+V  [libjvm.so+0x32b06c]  JVM_DefineClassWithSource+0x9c
+C  [libjava.so+0xb1bf]  Java_java_lang_ClassLoader_defineClass1+0x2af
+j  java.lang.ClassLoader.defineClass1(Ljava/lang/String;[BIILjava/security/ProtectionDomain;Ljava/lang/String;)Ljava/lang/Class;+0
+j  java.lang.ClassLoader.defineClass(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;+30
+j  java.security.SecureClassLoader.defineClass(Ljava/lang/String;[BIILjava/security/CodeSource;)Ljava/lang/Class;+12
+j  java.net.URLClassLoader.defineClass(Ljava/lang/String;Lsun/misc/Resource;)Ljava/lang/Class;+220
+j  java.net.URLClassLoader.access$100(Ljava/net/URLClassLoader;Ljava/lang/String;Lsun/misc/Resource;)Ljava/lang/Class;+3
+j  java.net.URLClassLoader$1.run()Ljava/lang/Class;+43
+j  java.net.URLClassLoader$1.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x2a7875]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x315
+V  [libjvm.so+0x3fa1e9]  os::os_exception_wrapper(void (*)(JavaValue*, methodHandle*, JavaCallArguments*, Thread*), JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x19
+V  [libjvm.so+0x2a64ef]  JavaCalls::call(JavaValue*, methodHandle, JavaCallArguments*, Thread*)+0x2f
+V  [libjvm.so+0x32a569]  JVM_DoPrivileged+0x249
+C  [libjava.so+0x9a4a]  Java_java_security_AccessController_doPrivileged__Ljava_security_PrivilegedExceptionAction_2Ljava_security_AccessControlContext_2+0x3a
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.net.URLClassLoader.findClass(Ljava/lang/String;)Ljava/lang/Class;+13
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+70
+j  sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+36
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+3
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x2a7875]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x315
+V  [libjvm.so+0x3fa1e9]  os::os_exception_wrapper(void (*)(JavaValue*, methodHandle*, JavaCallArguments*, Thread*), JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x19
+V  [libjvm.so+0x2a64ef]  JavaCalls::call(JavaValue*, methodHandle, JavaCallArguments*, Thread*)+0x2f
+V  [libjvm.so+0x2a672a]  JavaCalls::call_virtual(JavaValue*, KlassHandle, Symbol*, Symbol*, JavaCallArguments*, Thread*)+0x10a
+V  [libjvm.so+0x2a67f5]  JavaCalls::call_virtual(JavaValue*, Handle, KlassHandle, Symbol*, Symbol*, Handle, Thread*)+0x55
+V  [libjvm.so+0x49e559]  SystemDictionary::load_instance_class(Symbol*, Handle, Thread*)+0x489
+V  [libjvm.so+0x49cc52]  SystemDictionary::resolve_instance_class_or_null(Symbol*, Handle, Handle, Thread*)+0x742
+V  [libjvm.so+0x49d0b9]  SystemDictionary::resolve_or_null(Symbol*, Handle, Handle, Thread*)+0x49
+V  [libjvm.so+0x49e5d0]  SystemDictionary::resolve_or_fail(Symbol*, Handle, Handle, bool, Thread*)+0x30
+V  [libjvm.so+0x1d5cfb]  constantPoolOopDesc::klass_at_impl(constantPoolHandle, int, Thread*)+0x1cb
+V  [libjvm.so+0x29fdb7]  InterpreterRuntime::_new(JavaThread*, constantPoolOopDesc*, int)+0x67
+j  org.jvnet.hk2.component.BinderFactoryImpl.bind(Ljava/lang/Class;[Ljava/lang/Class;)Lorg/glassfish/hk2/Binder;+0
+j  org.glassfish.jersey.internal.inject.AbstractModule.bind(Ljava/lang/Class;[Ljava/lang/Class;)Lorg/glassfish/hk2/Binder;+6
+j  org.glassfish.jersey.message.internal.MessagingModules$HeaderDelegateProviders.configure()V+8
+j  org.glassfish.jersey.internal.inject.AbstractModule.configure(Lorg/glassfish/hk2/BinderFactory;)V+31
+j  org.jvnet.hk2.component.HK2ProviderImpl.create(Lorg/glassfish/hk2/Services;[Lorg/glassfish/hk2/Module;)Lorg/glassfish/hk2/Services;+106
+j  org.glassfish.hk2.HK2.create(Lorg/glassfish/hk2/Services;[Lorg/glassfish/hk2/Module;)Lorg/glassfish/hk2/Services;+6
+j  com.sun.ws.rs.ext.RuntimeDelegateImpl.<init>()V+19
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x2a7875]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x315
+V  [libjvm.so+0x3fa1e9]  os::os_exception_wrapper(void (*)(JavaValue*, methodHandle*, JavaCallArguments*, Thread*), JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x19
+V  [libjvm.so+0x2a64ef]  JavaCalls::call(JavaValue*, methodHandle, JavaCallArguments*, Thread*)+0x2f
+V  [libjvm.so+0x43f97e]  Reflection::invoke(instanceKlassHandle, methodHandle, Handle, bool, objArrayHandle, BasicType, objArrayHandle, bool, Thread*)+0x3fe
+V  [libjvm.so+0x44084e]  Reflection::invoke_constructor(oopDesc*, objArrayHandle, Thread*)+0x2de
+V  [libjvm.so+0x31e9db]  JVM_NewInstanceFromConstructor+0xdb
+C  [libjava.so+0x151eb]  Java_sun_reflect_NativeConstructorAccessorImpl_newInstance0+0x2b
+j  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+72
+j  sun.reflect.DelegatingConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+5
+j  java.lang.reflect.Constructor.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+79
+j  java.lang.Class.newInstance()Ljava/lang/Object;+132
+j  javax.ws.rs.ext.FactoryFinder.newInstance(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljava/lang/Object;+78
+j  javax.ws.rs.ext.FactoryFinder.find(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;+387
+j  javax.ws.rs.ext.RuntimeDelegate.findDelegate()Ljavax/ws/rs/ext/RuntimeDelegate;+4
+j  javax.ws.rs.ext.RuntimeDelegate.getInstance()Ljavax/ws/rs/ext/RuntimeDelegate;+22
+j  javax.ws.rs.core.UriBuilder.newInstance()Ljavax/ws/rs/core/UriBuilder;+0
+j  javax.ws.rs.core.UriBuilder.fromUri(Ljava/net/URI;)Ljavax/ws/rs/core/UriBuilder;+0
+j  javax.ws.rs.core.UriBuilder.fromUri(Ljava/lang/String;)Ljavax/ws/rs/core/UriBuilder;+23
+j  br.org.base.server.BarServer.main([Ljava/lang/String;)V+28
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x2a7875]  JavaCalls::call_helper(JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x315
+V  [libjvm.so+0x3fa1e9]  os::os_exception_wrapper(void (*)(JavaValue*, methodHandle*, JavaCallArguments*, Thread*), JavaValue*, methodHandle*, JavaCallArguments*, Thread*)+0x19
+V  [libjvm.so+0x2a64ef]  JavaCalls::call(JavaValue*, methodHandle, JavaCallArguments*, Thread*)+0x2f
+V  [libjvm.so+0x2e28b2]  jni_invoke_static(JNIEnv_*, JavaValue*, _jobject*, JNICallType, _jmethodID*, JNI_ArgumentPusher*, Thread*)+0x242
+V  [libjvm.so+0x2f8ada]  jni_CallStaticVoidMethod+0xca
+C  [libjli.so+0x2e8d]  JavaMain+0x8bd
+C  [libpthread.so.0+0x6d78]  start_thread+0xd8
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.net.URLClassLoader.findClass(Ljava/lang/String;)Ljava/lang/Class;+13
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+70
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+38
+j  sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+36
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+3
+v  ~StubRoutines::call_stub
+j  java.lang.ClassLoader.defineClass1(Ljava/lang/String;[BIILjava/security/ProtectionDomain;Ljava/lang/String;)Ljava/lang/Class;+0
+j  java.lang.ClassLoader.defineClass(Ljava/lang/String;[BIILjava/security/ProtectionDomain;)Ljava/lang/Class;+30
+j  java.security.SecureClassLoader.defineClass(Ljava/lang/String;[BIILjava/security/CodeSource;)Ljava/lang/Class;+12
+j  java.net.URLClassLoader.defineClass(Ljava/lang/String;Lsun/misc/Resource;)Ljava/lang/Class;+220
+j  java.net.URLClassLoader.access$100(Ljava/net/URLClassLoader;Ljava/lang/String;Lsun/misc/Resource;)Ljava/lang/Class;+3
+j  java.net.URLClassLoader$1.run()Ljava/lang/Class;+43
+j  java.net.URLClassLoader$1.run()Ljava/lang/Object;+1
+v  ~StubRoutines::call_stub
+j  java.security.AccessController.doPrivileged(Ljava/security/PrivilegedExceptionAction;Ljava/security/AccessControlContext;)Ljava/lang/Object;+0
+j  java.net.URLClassLoader.findClass(Ljava/lang/String;)Ljava/lang/Class;+13
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+70
+j  sun.misc.Launcher$AppClassLoader.loadClass(Ljava/lang/String;Z)Ljava/lang/Class;+36
+j  java.lang.ClassLoader.loadClass(Ljava/lang/String;)Ljava/lang/Class;+3
+v  ~StubRoutines::call_stub
+j  org.jvnet.hk2.component.BinderFactoryImpl.bind(Ljava/lang/Class;[Ljava/lang/Class;)Lorg/glassfish/hk2/Binder;+0
+j  org.glassfish.jersey.internal.inject.AbstractModule.bind(Ljava/lang/Class;[Ljava/lang/Class;)Lorg/glassfish/hk2/Binder;+6
+j  org.glassfish.jersey.message.internal.MessagingModules$HeaderDelegateProviders.configure()V+8
+j  org.glassfish.jersey.internal.inject.AbstractModule.configure(Lorg/glassfish/hk2/BinderFactory;)V+31
+j  org.jvnet.hk2.component.HK2ProviderImpl.create(Lorg/glassfish/hk2/Services;[Lorg/glassfish/hk2/Module;)Lorg/glassfish/hk2/Services;+106
+j  org.glassfish.hk2.HK2.create(Lorg/glassfish/hk2/Services;[Lorg/glassfish/hk2/Module;)Lorg/glassfish/hk2/Services;+6
+j  com.sun.ws.rs.ext.RuntimeDelegateImpl.<init>()V+19
+v  ~StubRoutines::call_stub
+j  sun.reflect.NativeConstructorAccessorImpl.newInstance0(Ljava/lang/reflect/Constructor;[Ljava/lang/Object;)Ljava/lang/Object;+0
+j  sun.reflect.NativeConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+72
+j  sun.reflect.DelegatingConstructorAccessorImpl.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+5
+j  java.lang.reflect.Constructor.newInstance([Ljava/lang/Object;)Ljava/lang/Object;+79
+j  java.lang.Class.newInstance()Ljava/lang/Object;+132
+j  javax.ws.rs.ext.FactoryFinder.newInstance(Ljava/lang/String;Ljava/lang/ClassLoader;)Ljava/lang/Object;+78
+j  javax.ws.rs.ext.FactoryFinder.find(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/Object;+387
+j  javax.ws.rs.ext.RuntimeDelegate.findDelegate()Ljavax/ws/rs/ext/RuntimeDelegate;+4
+j  javax.ws.rs.ext.RuntimeDelegate.getInstance()Ljavax/ws/rs/ext/RuntimeDelegate;+22
+j  javax.ws.rs.core.UriBuilder.newInstance()Ljavax/ws/rs/core/UriBuilder;+0
+j  javax.ws.rs.core.UriBuilder.fromUri(Ljava/net/URI;)Ljavax/ws/rs/core/UriBuilder;+0
+j  javax.ws.rs.core.UriBuilder.fromUri(Ljava/lang/String;)Ljavax/ws/rs/core/UriBuilder;+23
+j  br.org.base.server.BarServer.main([Ljava/lang/String;)V+28
+v  ~StubRoutines::call_stub
+
+---------------  P R O C E S S  ---------------
+
+Java Threads: ( => current thread )
+  0xb6a70000 JavaThread "Service Thread" daemon [_thread_blocked, id=5545, stack(0x9ff2e000,0x9ff7f000)]
+  0xb6a6e400 JavaThread "C1 CompilerThread0" daemon [_thread_blocked, id=5544, stack(0x9ff7f000,0xa0000000)]
+  0xb6a6c800 JavaThread "Signal Dispatcher" daemon [_thread_blocked, id=5543, stack(0xa030d000,0xa035e000)]
+  0xb6a5c400 JavaThread "Finalizer" daemon [_thread_blocked, id=5542, stack(0xa035e000,0xa03af000)]
+  0xb6a5ac00 JavaThread "Reference Handler" daemon [_thread_blocked, id=5541, stack(0xa03af000,0xa0400000)]
+=>0xb6a09400 JavaThread "main" [_thread_in_vm, id=5539, stack(0xb6b25000,0xb6b76000)]
+
+Other Threads:
+  0xb6a59400 VMThread [stack: 0xa0504000,0xa0585000] [id=5540]
+  0xb6a7a800 WatcherThread [stack: 0x9fead000,0x9ff2e000] [id=5546]
+
+VM state:not at safepoint (normal execution)
+
+VM Mutex/Monitor currently owned by a thread: None
+
+Heap
+ def new generation   total 4928K, used 3664K [0xa0900000, 0xa0e50000, 0xa5e50000)
+  eden space 4416K,  71% used [0xa0900000, 0xa0c141f8, 0xa0d50000)
+  from space 512K, 100% used [0xa0dd0000, 0xa0e50000, 0xa0e50000)
+  to   space 512K,   0% used [0xa0d50000, 0xa0d50000, 0xa0dd0000)
+ tenured generation   total 10944K, used 538K [0xa5e50000, 0xa6900000, 0xb0900000)
+   the space 10944K,   4% used [0xa5e50000, 0xa5ed6848, 0xa5ed6a00, 0xa6900000)
+ compacting perm gen  total 12288K, used 2346K [0xb0900000, 0xb1500000, 0xb4900000)
+   the space 12288K,  19% used [0xb0900000, 0xb0b4aba8, 0xb0b4ac00, 0xb1500000)
+No shared spaces configured.
+
+Card table byte_map: [0xa085f000,0xa0900000] byte_map_base: 0xa035a800
+
+Polling page: 0xb777a000
+
+Code Cache  [0xb498e000, 0xb4a46000, 0xb698e000)
+ total_blobs=212 nmethods=76 adapters=73 free_code_cache=32045Kb largest_free_block=32814528
+
+Compilation events (10 events):
+Event: 0,414 Thread 0xb6a6e400   72             sun.misc.MetaIndex::mayContain (51 bytes)
+Event: 0,415 Thread 0xb6a6e400 nmethod 72 0xb4a41788 code [0xb4a418b0, 0xb4a41a38]
+Event: 0,418 Thread 0xb6a6e400   73             java.lang.AbstractStringBuilder::expandCapacity (50 bytes)
+Event: 0,419 Thread 0xb6a6e400 nmethod 73 0xb4a41c48 code [0xb4a41d70, 0xb4a41fa8]
+Event: 0,448 Thread 0xb6a6e400   74             java.net.URL::getProtocol (5 bytes)
+Event: 0,448 Thread 0xb6a6e400 nmethod 74 0xb4a420c8 code [0xb4a421c0, 0xb4a42240]
+Event: 0,461 Thread 0xb6a6e400   75             java.lang.System::getSecurityManager (4 bytes)
+Event: 0,461 Thread 0xb6a6e400 nmethod 75 0xb4a42288 code [0xb4a42380, 0xb4a423f0]
+Event: 0,465 Thread 0xb6a6e400   76             java.lang.String::substring (79 bytes)
+Event: 0,466 Thread 0xb6a6e400 nmethod 76 0xb4a42448 code [0xb4a425b0, 0xb4a42860]
+
+GC Heap History (2 events):
+Event: 0,400 GC heap before
+{Heap before GC invocations=0 (full 0):
+ def new generation   total 4928K, used 4416K [0xa0900000, 0xa0e50000, 0xa5e50000)
+  eden space 4416K, 100% used [0xa0900000, 0xa0d50000, 0xa0d50000)
+  from space 512K,   0% used [0xa0d50000, 0xa0d50000, 0xa0dd0000)
+  to   space 512K,   0% used [0xa0dd0000, 0xa0dd0000, 0xa0e50000)
+ tenured generation   total 10944K, used 0K [0xa5e50000, 0xa6900000, 0xb0900000)
+   the space 10944K,   0% used [0xa5e50000, 0xa5e50000, 0xa5e50200, 0xa6900000)
+ compacting perm gen  total 12288K, used 2146K [0xb0900000, 0xb1500000, 0xb4900000)
+   the space 12288K,  17% used [0xb0900000, 0xb0b18ab0, 0xb0b18c00, 0xb1500000)
+No shared spaces configured.
+Event: 0,408 GC heap after
+Heap after GC invocations=1 (full 0):
+ def new generation   total 4928K, used 512K [0xa0900000, 0xa0e50000, 0xa5e50000)
+  eden space 4416K,   0% used [0xa0900000, 0xa0900000, 0xa0d50000)
+  from space 512K, 100% used [0xa0dd0000, 0xa0e50000, 0xa0e50000)
+  to   space 512K,   0% used [0xa0d50000, 0xa0d50000, 0xa0dd0000)
+ tenured generation   total 10944K, used 538K [0xa5e50000, 0xa6900000, 0xb0900000)
+   the space 10944K,   4% used [0xa5e50000, 0xa5ed6848, 0xa5ed6a00, 0xa6900000)
+ compacting perm gen  total 12288K, used 2146K [0xb0900000, 0xb1500000, 0xb4900000)
+   the space 12288K,  17% used [0xb0900000, 0xb0b18ab0, 0xb0b18c00, 0xb1500000)
+No shared spaces configured.
+}
+
+Deoptimization events (0 events):
+No events
+
+Internal exceptions (10 events):
+Event: 0,463 Thread 0xb6a09400 Threw 0xa0b9b660 at /HUDSON/workspace/jdk7u40-2-build-linux-i586-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 0,465 Thread 0xb6a09400 Threw 0xa0baabf8 at /HUDSON/workspace/jdk7u40-2-build-linux-i586-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 0,467 Thread 0xb6a09400 Threw 0xa0bba5b0 at /HUDSON/workspace/jdk7u40-2-build-linux-i586-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 0,468 Thread 0xb6a09400 Threw 0xa0bca320 at /HUDSON/workspace/jdk7u40-2-build-linux-i586-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 0,469 Thread 0xb6a09400 Threw 0xa0bd1d38 at /HUDSON/workspace/jdk7u40-2-build-linux-i586-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 0,470 Thread 0xb6a09400 Threw 0xa0bdd480 at /HUDSON/workspace/jdk7u40-2-build-linux-i586-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 0,471 Thread 0xb6a09400 Threw 0xa0be25d0 at /HUDSON/workspace/jdk7u40-2-build-linux-i586-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 0,473 Thread 0xb6a09400 Threw 0xa0bf7c28 at /HUDSON/workspace/jdk7u40-2-build-linux-i586-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 0,474 Thread 0xb6a09400 Threw 0xa0bfd5e0 at /HUDSON/workspace/jdk7u40-2-build-linux-i586-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+Event: 0,475 Thread 0xb6a09400 Threw 0xa0c0af30 at /HUDSON/workspace/jdk7u40-2-build-linux-i586-product/jdk7u40/hotspot/src/share/vm/prims/jvm.cpp:1244
+
+Events (10 events):
+Event: 0,471 loading class 0x9fbd1c48
+Event: 0,471 loading class 0x9fbd1c48 done
+Event: 0,473 loading class 0xa078de88
+Event: 0,473 loading class 0xa078de88 done
+Event: 0,473 loading class 0x9fbcaa88
+Event: 0,473 loading class 0x9fbcaa88 done
+Event: 0,474 loading class 0x9fbf2278
+Event: 0,474 loading class 0x9fbf2278 done
+Event: 0,475 loading class 0x9fbc9d10
+Event: 0,475 loading class 0x9fbc9d10 done
+
+
+Dynamic libraries:
+08048000-08049000 r-xp 00000000 08:04 1715931    /usr/local/java/jre1.7.0_40/bin/java
+08049000-0804a000 rw-p 00000000 08:04 1715931    /usr/local/java/jre1.7.0_40/bin/java
+094ad000-094ce000 rw-p 00000000 00:00 0          [heap]
+9f818000-9f900000 rw-p 00000000 00:00 0 
+9f900000-9f929000 rw-p 00000000 00:00 0 
+9f929000-9fa00000 ---p 00000000 00:00 0 
+9fa9e000-9fb00000 rw-p 00000000 00:00 0 
+9fb00000-9fbfc000 rw-p 00000000 00:00 0 
+9fbfc000-9fc00000 ---p 00000000 00:00 0 
+9fc25000-9fc28000 rw-p 00000000 00:00 0 
+9fc28000-9fc2c000 r--s 00027000 08:04 3421943    /home/guilherme/projects/grizzlyboilerplate/target/dependency/plexus-archiver-1.0-alpha-10.jar
+9fc2c000-9fc2d000 r--s 00004000 08:04 3421756    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jackson-jaxrs-1.9.2.jar
+9fc2d000-9fc34000 r--s 0004a000 08:04 3421662    /home/guilherme/projects/grizzlyboilerplate/target/dependency/auto-depends-1.6.32.jar
+9fc34000-9fc36000 r--s 00005000 08:04 3421875    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-common-artifact-filters-1.0.jar
+9fc36000-9fc3b000 r--s 00047000 08:04 3421946    /home/guilherme/projects/grizzlyboilerplate/target/dependency/asm-all-repackaged-1.6.32.jar
+9fc3b000-9fc3e000 r--s 00014000 08:04 3421885    /home/guilherme/projects/grizzlyboilerplate/target/dependency/mongo-jackson-mapper-1.4.1.jar
+9fc3e000-9fc40000 r--s 00008000 08:04 3421874    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-shared-io-1.1.jar
+9fc40000-9fc44000 r--s 0002b000 08:04 3421883    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-assembly-plugin-2.2-beta-2.jar
+9fc44000-9fc64000 r--s 00173000 08:04 3421932    /home/guilherme/projects/grizzlyboilerplate/target/dependency/guava-11.0.1.jar
+9fc64000-9fc67000 r--s 0001a000 08:04 3421948    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jsch-0.1.23.jar
+9fc67000-9fc6e000 r--s 00036000 08:04 3421876    /home/guilherme/projects/grizzlyboilerplate/target/dependency/httpclient-4.0-alpha4.jar
+9fc6e000-9fc6f000 r--s 00002000 08:04 3421907    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-error-diagnostics-2.0.jar
+9fc6f000-9fc73000 r--s 0002f000 08:04 3421947    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jackson-core-2.1.3.jar
+9fc73000-9fc78000 r--s 00025000 08:04 3421880    /home/guilherme/projects/grizzlyboilerplate/target/dependency/httpcore-4.0-beta1.jar
+9fc78000-9fc79000 r--s 00001000 08:04 3420187    /home/guilherme/projects/grizzlyboilerplate/target/dependency/wagon-http-lightweight-1.0-alpha-5.jar
+9fc79000-9fc7b000 r--s 00004000 08:04 3421751    /home/guilherme/projects/grizzlyboilerplate/target/dependency/stax-api-1.0-2.jar
+9fc7b000-9fc80000 r--s 0003b000 08:04 3421909    /home/guilherme/projects/grizzlyboilerplate/target/dependency/grizzly-http-2.2.4.jar
+9fc80000-9fc82000 r--s 00004000 08:04 3421950    /home/guilherme/projects/grizzlyboilerplate/target/dependency/plexus-active-collections-1.0-beta-2.jar
+9fc82000-9fc83000 r--s 00004000 08:04 3421644    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-repository-metadata-2.0.2.jar
+9fc83000-9fc84000 r--s 00001000 08:04 3421895    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-reporting-api-2.0.jar
+9fc84000-9fc86000 r--s 00006000 08:04 3421469    /home/guilherme/projects/grizzlyboilerplate/target/dependency/file-management-1.1.jar
+9fc86000-9fc8a000 r--s 00034000 08:04 3421891    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jackson-core-asl-1.9.2.jar
+9fc8a000-9fc90000 r--s 00059000 08:04 3420197    /home/guilherme/projects/grizzlyboilerplate/target/dependency/mail-1.4.jar
+9fc90000-9fc94000 r--s 00020000 08:04 3421913    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jersey-media-json-2.0-m02.jar
+9fc94000-9fc97000 r--s 00018000 08:04 3421829    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-project-2.0.4.jar
+9fc97000-9fc9f000 r--s 0005f000 08:04 3421805    /home/guilherme/projects/grizzlyboilerplate/target/dependency/mongo-java-driver-2.11.3.jar
+9fc9f000-9fca1000 r--s 0000a000 08:04 3421926    /home/guilherme/projects/grizzlyboilerplate/target/dependency/json-20090211.jar
+9fca1000-9fca2000 r--s 00006000 08:04 3421781    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jackson-xc-1.9.2.jar
+9fca2000-9fca4000 r--s 00001000 08:04 3421933    /home/guilherme/projects/grizzlyboilerplate/target/dependency/slf4j-log4j12-1.7.5.jar
+9fca4000-9fca5000 r--s 00001000 08:04 3420192    /home/guilherme/projects/grizzlyboilerplate/target/dependency/wagon-file-1.0-alpha-5.jar
+9fca5000-9fcb5000 r--s 000d2000 08:04 3421798    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jackson-databind-2.1.3.jar
+9fcb5000-9fcb7000 r--s 00001000 08:04 3420214    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-plugin-api-2.0.4.jar
+9fcb7000-9fcbb000 r--s 0001e000 08:04 3421779    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-core-2.0.jar
+9fcbb000-9fcbd000 r--s 00003000 08:04 3420422    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-plugin-parameter-documenter-2.0.jar
+9fcbd000-9fcbf000 r--s 00002000 08:04 3421896    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jersey-container-grizzly2-http-2.0-m02.jar
+9fcbf000-9fcc1000 r--s 00005000 08:04 3421899    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-plugin-registry-2.0.jar
+9fcc1000-9fcd0000 r--s 0007f000 08:04 3421873    /home/guilherme/projects/grizzlyboilerplate/target/dependency/joda-time-2.3.jar
+9fcd0000-9fcd2000 r--s 00009000 08:04 3421790    /home/guilherme/projects/grizzlyboilerplate/target/dependency/wagon-provider-api-1.0-alpha-6.jar
+9fcd2000-9fcd7000 r--s 0002a000 08:04 3421949    /home/guilherme/projects/grizzlyboilerplate/target/dependency/gson-2.2.4.jar
+9fcd7000-9fcdd000 r--s 00033000 08:04 3421868    /home/guilherme/projects/grizzlyboilerplate/target/dependency/snakeyaml-1.6.jar
+9fcdd000-9fcdf000 r--s 00004000 08:04 3421877    /home/guilherme/projects/grizzlyboilerplate/target/dependency/gmbal-api-only-3.0.0-b023.jar
+9fcdf000-9fce1000 r--s 00006000 08:04 3421795    /home/guilherme/projects/grizzlyboilerplate/target/dependency/plexus-io-1.0-alpha-2.jar
+9fce1000-9fce3000 r--s 00012000 08:04 3421859    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-model-2.0.4.jar
+9fce3000-9fce5000 r--s 00000000 08:04 3421938    /home/guilherme/projects/grizzlyboilerplate/target/dependency/doxia-sink-api-1.0-alpha-4.jar
+9fce5000-9fce7000 r--s 00006000 08:04 3421755    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jcommander-1.12.jar
+9fce7000-9fce9000 r--s 0000e000 08:04 3421888    /home/guilherme/projects/grizzlyboilerplate/target/dependency/activation-1.1.jar
+9fce9000-9fcf2000 r--s 0006f000 08:04 3421884    /home/guilherme/projects/grizzlyboilerplate/target/dependency/log4j-1.2.17.jar
+9fcf2000-9fd00000 r--s 000ad000 08:04 3421750    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jackson-mapper-asl-1.9.2.jar
+9fd00000-9fe00000 rw-p 00000000 00:00 0 
+9fe00000-9fe02000 r--s 00005000 08:04 3421757    /home/guilherme/projects/grizzlyboilerplate/target/dependency/slf4j-api-1.7.5.jar
+9fe02000-9fe04000 r--s 00019000 08:04 3421892    /home/guilherme/projects/grizzlyboilerplate/target/dependency/htmlcleaner-2.2.jar
+9fe04000-9fe06000 r--s 00007000 08:04 3421789    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jackson-annotations-2.1.2.jar
+9fe06000-9fe08000 r--s 0000a000 08:04 3421858    /home/guilherme/projects/grizzlyboilerplate/target/dependency/commons-codec-1.3.jar
+9fe08000-9fe0f000 r--s 00029000 08:04 3421780    /home/guilherme/projects/grizzlyboilerplate/target/dependency/plexus-container-default-1.0-alpha-9-stable-1.jar
+9fe0f000-9fe12000 r--s 00023000 08:04 3421771    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jdom-1.1.jar
+9fe12000-9fe15000 r--s 00011000 08:04 3421881    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-artifact-2.0.4.jar
+9fe15000-9fe17000 r--s 00006000 08:04 3425319    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-profile-2.0.4.jar
+9fe17000-9fe21000 r--s 00087000 08:04 3421759    /home/guilherme/projects/grizzlyboilerplate/target/dependency/testng-6.1.1.jar
+9fe21000-9fe23000 r--s 00008000 08:04 3421928    /home/guilherme/projects/grizzlyboilerplate/target/dependency/classworlds-1.1-alpha-2.jar
+9fe23000-9fe24000 r--s 00005000 08:04 3421758    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-repository-builder-1.0-alpha-2.jar
+9fe24000-9fe26000 r--s 00006000 08:04 3420198    /home/guilherme/projects/grizzlyboilerplate/target/dependency/hk2-api-1.6.32.jar
+9fe26000-9fe28000 r--s 0000a000 08:04 3421650    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jsr311-api-1.1.1.jar
+9fe28000-9fe3b000 r--s 00128000 08:04 3421887    /home/guilherme/projects/grizzlyboilerplate/target/dependency/ant-1.7.0.jar
+9fe3b000-9fe3d000 r--s 00002000 08:04 3421931    /home/guilherme/projects/grizzlyboilerplate/target/dependency/plexus-interactivity-api-1.0-alpha-4.jar
+9fe3d000-9fe40000 r--s 00017000 08:04 3421904    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jaxb-api-2.2.2.jar
+9fe40000-9fe43000 r--s 00014000 08:04 3421861    /home/guilherme/projects/grizzlyboilerplate/target/dependency/barbecue-1.5-beta1.jar
+9fe43000-9fe45000 r--s 00007000 08:04 3421916    /home/guilherme/projects/grizzlyboilerplate/target/dependency/wagon-ssh-1.0-alpha-5.jar
+9fe45000-9fe48000 r--s 0000b000 08:04 3421761    /home/guilherme/projects/grizzlyboilerplate/target/dependency/persistence-api-1.0.2.jar
+9fe48000-9fe4b000 r--s 0000a000 08:04 3421754    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-artifact-manager-2.0.2.jar
+9fe4b000-9fe59000 r--s 000a6000 08:04 3421898    /home/guilherme/projects/grizzlyboilerplate/target/dependency/grizzly-framework-2.2.4.jar
+9fe59000-9fe5c000 r--s 00018000 08:04 3421860    /home/guilherme/projects/grizzlyboilerplate/target/dependency/mongojack-2.0.0-RC5.jar
+9fe5c000-9fe67000 r--s 0006c000 08:04 3420202    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jersey-common-2.0-m02.jar
+9fe67000-9fe6f000 r--s 00028000 08:04 3420201    /home/guilherme/projects/grizzlyboilerplate/target/dependency/xml-apis-1.3.04.jar
+9fe6f000-9fe70000 r--s 00002000 08:04 3421936    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-archiver-2.2.jar
+9fe70000-9fe73000 r--s 00012000 08:04 3421788    /home/guilherme/projects/grizzlyboilerplate/target/dependency/javax.ws.rs-api-2.0-m03.jar
+9fe73000-9fe75000 r--s 00009000 08:04 3421935    /home/guilherme/projects/grizzlyboilerplate/target/dependency/management-api-3.0.0-b012.jar
+9fe75000-9fe88000 r--s 000c7000 08:04 3421853    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jaxb-impl-2.2.3-1.jar
+9fe88000-9fead000 r--s 002e3000 08:04 3421890    /home/guilherme/projects/grizzlyboilerplate/target/dependency/xalan-2.7.1.jar
+9fead000-9feae000 ---p 00000000 00:00 0 
+9feae000-9ff2e000 rw-p 00000000 00:00 0          [stack:5546]
+9ff2e000-9ff31000 ---p 00000000 00:00 0 
+9ff31000-9ff7f000 rw-p 00000000 00:00 0          [stack:5545]
+9ff7f000-9ff82000 ---p 00000000 00:00 0 
+9ff82000-a0000000 rw-p 00000000 00:00 0          [stack:5544]
+a0000000-a0200000 r--p 00000000 08:04 1449933    /usr/lib/locale/locale-archive
+a0200000-a0221000 rw-p 00000000 00:00 0 
+a0221000-a0300000 ---p 00000000 00:00 0 
+a0300000-a0301000 r--s 00002000 08:04 3421739    /home/guilherme/projects/grizzlyboilerplate/target/dependency/ant-launcher-1.7.0.jar
+a0301000-a0305000 r--s 00030000 08:04 3420210    /home/guilherme/projects/grizzlyboilerplate/target/dependency/plexus-utils-1.5.1.jar
+a0305000-a0307000 r--s 0000d000 08:04 3421879    /home/guilherme/projects/grizzlyboilerplate/target/dependency/commons-logging-1.1.1.jar
+a0307000-a0308000 r--s 00001000 08:04 3421940    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-monitor-2.0.jar
+a0308000-a0309000 r--s 00004000 08:04 3420206    /home/guilherme/projects/grizzlyboilerplate/target/dependency/osgi-resource-locator-1.0.1.jar
+a0309000-a030b000 r--s 00006000 08:04 3421872    /home/guilherme/projects/grizzlyboilerplate/target/dependency/commons-cli-1.0.jar
+a030b000-a030d000 r--s 0000f000 08:04 3421774    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jettison-1.1.jar
+a030d000-a0310000 ---p 00000000 00:00 0 
+a0310000-a035e000 rw-p 00000000 00:00 0          [stack:5543]
+a035e000-a0361000 ---p 00000000 00:00 0 
+a0361000-a03af000 rw-p 00000000 00:00 0          [stack:5542]
+a03af000-a03b2000 ---p 00000000 00:00 0 
+a03b2000-a0400000 rw-p 00000000 00:00 0          [stack:5541]
+a0400000-a0467000 rw-p 00000000 00:00 0 
+a0467000-a0500000 ---p 00000000 00:00 0 
+a0500000-a0501000 r--s 00007000 08:04 3421244    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-plugin-testing-harness-1.1.jar
+a0501000-a0504000 r--s 00041000 08:04 3421905    /home/guilherme/projects/grizzlyboilerplate/target/dependency/serializer-2.7.1.jar
+a0504000-a0505000 ---p 00000000 00:00 0 
+a0505000-a05d0000 rw-p 00000000 00:00 0          [stack:5540]
+a05d0000-a078d000 r--s 031b5000 08:04 1715126    /usr/local/java/jre1.7.0_40/lib/rt.jar
+a078d000-a07ef000 rw-p 00000000 00:00 0 
+a07ef000-a0809000 rw-p 00000000 00:00 0 
+a0809000-a080f000 rw-p 00000000 00:00 0 
+a080f000-a085f000 rw-p 00000000 00:00 0 
+a085f000-a0862000 rw-p 00000000 00:00 0 
+a0862000-a0889000 rw-p 00000000 00:00 0 
+a0889000-a088f000 rw-p 00000000 00:00 0 
+a088f000-a08df000 rw-p 00000000 00:00 0 
+a08df000-a08e5000 rw-p 00000000 00:00 0 
+a08e5000-a08ff000 rw-p 00000000 00:00 0 
+a08ff000-a0e50000 rw-p 00000000 00:00 0 
+a0e50000-a5e50000 rw-p 00000000 00:00 0 
+a5e50000-a6900000 rw-p 00000000 00:00 0 
+a6900000-b0900000 rw-p 00000000 00:00 0 
+b0900000-b1500000 rw-p 00000000 00:00 0 
+b1500000-b4900000 rw-p 00000000 00:00 0 
+b4900000-b4902000 r--s 00007000 08:04 3421889    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-plugin-descriptor-2.0.jar
+b4902000-b4904000 r--s 0000c000 08:04 3421857    /home/guilherme/projects/grizzlyboilerplate/target/dependency/bson4jackson-1.3.0.jar
+b4904000-b4906000 r--s 00003000 08:04 3421882    /home/guilherme/projects/grizzlyboilerplate/target/dependency/tiger-types-1.4.jar
+b4906000-b490a000 r--s 0002a000 08:04 3421797    /home/guilherme/projects/grizzlyboilerplate/target/dependency/commons-io-2.4.jar
+b490a000-b490b000 r--s 00001000 08:04 3421893    /home/guilherme/projects/grizzlyboilerplate/target/dependency/grizzly-rcm-2.2.4.jar
+b490b000-b490e000 r--s 0001b000 08:04 3421878    /home/guilherme/projects/grizzlyboilerplate/target/dependency/junit-3.8.1.jar
+b490e000-b4911000 rw-p 00000000 00:00 0 
+b4911000-b498e000 rw-p 00000000 00:00 0 
+b498e000-b4a46000 rwxp 00000000 00:00 0 
+b4a46000-b698e000 rw-p 00000000 00:00 0 
+b698e000-b69a5000 r-xp 00000000 08:04 1715686    /usr/local/java/jre1.7.0_40/lib/i386/libzip.so
+b69a5000-b69a6000 rw-p 00017000 08:04 1715686    /usr/local/java/jre1.7.0_40/lib/i386/libzip.so
+b69a6000-b69b1000 r-xp 00000000 08:04 2496922    /lib/i386-linux-gnu/libnss_files-2.17.so
+b69b1000-b69b2000 r--p 0000a000 08:04 2496922    /lib/i386-linux-gnu/libnss_files-2.17.so
+b69b2000-b69b3000 rw-p 0000b000 08:04 2496922    /lib/i386-linux-gnu/libnss_files-2.17.so
+b69b3000-b69bd000 r-xp 00000000 08:04 2496918    /lib/i386-linux-gnu/libnss_nis-2.17.so
+b69bd000-b69be000 r--p 00009000 08:04 2496918    /lib/i386-linux-gnu/libnss_nis-2.17.so
+b69be000-b69bf000 rw-p 0000a000 08:04 2496918    /lib/i386-linux-gnu/libnss_nis-2.17.so
+b69bf000-b69c1000 r--s 00009000 08:04 3425670    /home/guilherme/projects/grizzlyboilerplate/target/dependency/maven-settings-2.0.4.jar
+b69c1000-b69ca000 r--s 00042000 08:04 3421902    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jersey-server-2.0-m02.jar
+b69ca000-b69cf000 r--s 00018000 08:04 3421794    /home/guilherme/projects/grizzlyboilerplate/target/dependency/aspectjrt-1.5.3.jar
+b69cf000-b69d4000 r--s 00040000 08:04 3421791    /home/guilherme/projects/grizzlyboilerplate/target/dependency/bsh-2.0b4.jar
+b69d4000-b69dc000 rw-s 00000000 08:04 5769823    /tmp/hsperfdata_guilherme/5538
+b69dc000-b69ff000 r-xp 00000000 08:04 1715650    /usr/local/java/jre1.7.0_40/lib/i386/libjava.so
+b69ff000-b6a00000 rw-p 00022000 08:04 1715650    /usr/local/java/jre1.7.0_40/lib/i386/libjava.so
+b6a00000-b6af8000 rw-p 00000000 00:00 0 
+b6af8000-b6b00000 ---p 00000000 00:00 0 
+b6b00000-b6b03000 r--s 00006000 08:04 3421894    /home/guilherme/projects/grizzlyboilerplate/target/dependency/jsr305-1.3.9.jar
+b6b03000-b6b18000 r-xp 00000000 08:04 2495691    /lib/i386-linux-gnu/libnsl-2.17.so
+b6b18000-b6b19000 r--p 00014000 08:04 2495691    /lib/i386-linux-gnu/libnsl-2.17.so
+b6b19000-b6b1a000 rw-p 00015000 08:04 2495691    /lib/i386-linux-gnu/libnsl-2.17.so
+b6b1a000-b6b1c000 rw-p 00000000 00:00 0 
+b6b1c000-b6b23000 r-xp 00000000 08:04 2491415    /lib/i386-linux-gnu/librt-2.17.so
+b6b23000-b6b24000 r--p 00006000 08:04 2491415    /lib/i386-linux-gnu/librt-2.17.so
+b6b24000-b6b25000 rw-p 00007000 08:04 2491415    /lib/i386-linux-gnu/librt-2.17.so
+b6b25000-b6b28000 ---p 00000000 00:00 0 
+b6b28000-b6b76000 rw-p 00000000 00:00 0          [stack:5539]
+b6b76000-b6bb7000 r-xp 00000000 08:04 2496916    /lib/i386-linux-gnu/libm-2.17.so
+b6bb7000-b6bb8000 r--p 00040000 08:04 2496916    /lib/i386-linux-gnu/libm-2.17.so
+b6bb8000-b6bb9000 rw-p 00041000 08:04 2496916    /lib/i386-linux-gnu/libm-2.17.so
+b6bb9000-b713f000 r-xp 00000000 08:04 1715645    /usr/local/java/jre1.7.0_40/lib/i386/client/libjvm.so
+b713f000-b7160000 rw-p 00586000 08:04 1715645    /usr/local/java/jre1.7.0_40/lib/i386/client/libjvm.so
+b7160000-b7581000 rw-p 00000000 00:00 0 
+b7581000-b772f000 r-xp 00000000 08:04 2495698    /lib/i386-linux-gnu/libc-2.17.so
+b772f000-b7731000 r--p 001ae000 08:04 2495698    /lib/i386-linux-gnu/libc-2.17.so
+b7731000-b7732000 rw-p 001b0000 08:04 2495698    /lib/i386-linux-gnu/libc-2.17.so
+b7732000-b7735000 rw-p 00000000 00:00 0 
+b7735000-b7738000 r-xp 00000000 08:04 2495699    /lib/i386-linux-gnu/libdl-2.17.so
+b7738000-b7739000 r--p 00002000 08:04 2495699    /lib/i386-linux-gnu/libdl-2.17.so
+b7739000-b773a000 rw-p 00003000 08:04 2495699    /lib/i386-linux-gnu/libdl-2.17.so
+b773a000-b773b000 rw-p 00000000 00:00 0 
+b773b000-b774e000 r-xp 00000000 08:04 1715654    /usr/local/java/jre1.7.0_40/lib/i386/jli/libjli.so
+b774e000-b774f000 rw-p 00012000 08:04 1715654    /usr/local/java/jre1.7.0_40/lib/i386/jli/libjli.so
+b774f000-b7766000 r-xp 00000000 08:04 2496915    /lib/i386-linux-gnu/libpthread-2.17.so
+b7766000-b7767000 r--p 00016000 08:04 2496915    /lib/i386-linux-gnu/libpthread-2.17.so
+b7767000-b7768000 rw-p 00017000 08:04 2496915    /lib/i386-linux-gnu/libpthread-2.17.so
+b7768000-b776a000 rw-p 00000000 00:00 0 
+b776a000-b776b000 r--s 00001000 08:04 3425618    /home/guilherme/projects/grizzlyboilerplate/target/dependency/javax.inject-1.6.32.jar
+b776b000-b776f000 r--s 00030000 08:04 3421900    /home/guilherme/projects/grizzlyboilerplate/target/dependency/grizzly-http-server-2.2.4.jar
+b776f000-b7770000 r--p 005e0000 08:04 1449933    /usr/lib/locale/locale-archive
+b7770000-b7777000 r-xp 00000000 08:04 2495701    /lib/i386-linux-gnu/libnss_compat-2.17.so
+b7777000-b7778000 r--p 00006000 08:04 2495701    /lib/i386-linux-gnu/libnss_compat-2.17.so
+b7778000-b7779000 rw-p 00007000 08:04 2495701    /lib/i386-linux-gnu/libnss_compat-2.17.so
+b7779000-b777a000 rw-p 00000000 00:00 0 
+b777a000-b777b000 r--p 00000000 00:00 0 
+b777b000-b7786000 r-xp 00000000 08:04 1715632    /usr/local/java/jre1.7.0_40/lib/i386/libverify.so
+b7786000-b7787000 rw-p 0000b000 08:04 1715632    /usr/local/java/jre1.7.0_40/lib/i386/libverify.so
+b7787000-b7789000 rw-p 00000000 00:00 0 
+b7789000-b778a000 r-xp 00000000 00:00 0          [vdso]
+b778a000-b77aa000 r-xp 00000000 08:04 2495694    /lib/i386-linux-gnu/ld-2.17.so
+b77aa000-b77ab000 r--p 0001f000 08:04 2495694    /lib/i386-linux-gnu/ld-2.17.so
+b77ab000-b77ac000 rw-p 00020000 08:04 2495694    /lib/i386-linux-gnu/ld-2.17.so
+bfc3e000-bfc5f000 rw-p 00000000 00:00 0          [stack]
+
+VM Arguments:
+java_command: br.org.base.server.BarServer
+Launcher Type: SUN_STANDARD
+
+Environment Variables:
+JAVA_HOME=/usr/local/java/jdk1.7.0_40
+JRE_HOME=/usr/local/java/jre1.7.0_40
+PATH=/opt/SenchaSDKTools-2.0.0-beta3:/home/guilherme/bin/Sencha/Cmd/4.0.0.203:/usr/local/heroku/bin:/opt/SenchaSDKTools-2.0.0-beta3:/home/guilherme/bin/Sencha/Cmd/4.0.0.203:/home/guilherme/bin:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/home/guilherme/bin:/usr/local/java/jdk1.7.0_40/bin:/home/guilherme/bin:/usr/local/java/jre1.7.0_40/bin
+SHELL=/bin/bash
+DISPLAY=:0
+
+Signal Handlers:
+SIGSEGV: [libjvm.so+0x503d90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGBUS: [libjvm.so+0x503d90], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGFPE: [libjvm.so+0x3fbe80], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGPIPE: [libjvm.so+0x3fbe80], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGXFSZ: [libjvm.so+0x3fbe80], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGILL: [libjvm.so+0x3fbe80], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGUSR1: SIG_DFL, sa_mask[0]=0x00000000, sa_flags=0x00000000
+SIGUSR2: [libjvm.so+0x3fd370], sa_mask[0]=0x00000000, sa_flags=0x10000004
+SIGHUP: [libjvm.so+0x3fe4c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGINT: [libjvm.so+0x3fe4c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGTERM: [libjvm.so+0x3fe4c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+SIGQUIT: [libjvm.so+0x3fe4c0], sa_mask[0]=0x7ffbfeff, sa_flags=0x10000004
+
+
+---------------  S Y S T E M  ---------------
+
+OS:wheezy/sid
+
+uname:Linux 3.11.0-15-generic #23-Ubuntu SMP Mon Dec 9 18:16:27 UTC 2013 i686
+libc:glibc 2.17 NPTL 2.17 
+rlimit: STACK 8192k, CORE 0k, NPROC 24094, NOFILE 4096, AS infinity
+load average:2,91 2,53 2,14
+
+/proc/meminfo:
+MemTotal:        3101640 kB
+MemFree:         1735808 kB
+Buffers:           49660 kB
+Cached:           369084 kB
+SwapCached:            0 kB
+Active:           978660 kB
+Inactive:         288524 kB
+Active(anon):     848788 kB
+Inactive(anon):    46200 kB
+Active(file):     129872 kB
+Inactive(file):   242324 kB
+Unevictable:          48 kB
+Mlocked:              48 kB
+HighTotal:       2231176 kB
+HighFree:         984976 kB
+LowTotal:         870464 kB
+LowFree:          750832 kB
+SwapTotal:       1999868 kB
+SwapFree:        1999868 kB
+Dirty:               252 kB
+Writeback:             0 kB
+AnonPages:        848456 kB
+Mapped:           220816 kB
+Shmem:             46552 kB
+Slab:              37536 kB
+SReclaimable:      17020 kB
+SUnreclaim:        20516 kB
+KernelStack:        4248 kB
+PageTables:        14292 kB
+NFS_Unstable:          0 kB
+Bounce:                0 kB
+WritebackTmp:          0 kB
+CommitLimit:     3550688 kB
+Committed_AS:    4369364 kB
+VmallocTotal:     122880 kB
+VmallocUsed:       47844 kB
+VmallocChunk:      69396 kB
+HardwareCorrupted:     0 kB
+AnonHugePages:         0 kB
+HugePages_Total:       0
+HugePages_Free:        0
+HugePages_Rsvd:        0
+HugePages_Surp:        0
+Hugepagesize:       2048 kB
+DirectMap4k:       65528 kB
+DirectMap2M:      847872 kB
+
+
+CPU:total 2 (2 cores per cpu, 1 threads per core) family 15 model 6 stepping 5, cmov, cx8, fxsr, mmx, sse, sse2, sse3, tsc
+
+/proc/cpuinfo:
+processor	: 0
+vendor_id	: GenuineIntel
+cpu family	: 15
+model		: 6
+model name	: Intel(R) Pentium(R) D CPU 3.20GHz
+stepping	: 5
+microcode	: 0xb
+cpu MHz		: 3200.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 2
+core id		: 0
+cpu cores	: 2
+apicid		: 0
+initial apicid	: 0
+fdiv_bug	: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 6
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc pebs bts pni dtes64 monitor ds_cpl est cid cx16 xtpr pdcm lahf_lm
+bogomips	: 6399.59
+clflush size	: 64
+cache_alignment	: 128
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+processor	: 1
+vendor_id	: GenuineIntel
+cpu family	: 15
+model		: 6
+model name	: Intel(R) Pentium(R) D CPU 3.20GHz
+stepping	: 5
+microcode	: 0xb
+cpu MHz		: 3200.000
+cache size	: 2048 KB
+physical id	: 0
+siblings	: 2
+core id		: 1
+cpu cores	: 2
+apicid		: 1
+initial apicid	: 1
+fdiv_bug	: no
+f00f_bug	: no
+coma_bug	: no
+fpu		: yes
+fpu_exception	: yes
+cpuid level	: 6
+wp		: yes
+flags		: fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe nx lm constant_tsc pebs bts pni dtes64 monitor ds_cpl est cid cx16 xtpr pdcm lahf_lm
+bogomips	: 6399.59
+clflush size	: 64
+cache_alignment	: 128
+address sizes	: 36 bits physical, 48 bits virtual
+power management:
+
+
+
+Memory: 4k page, physical 3101640k(1735808k free), swap 1999868k(1999868k free)
+
+vm_info: Java HotSpot(TM) Client VM (24.0-b56) for linux-x86 JRE (1.7.0_40-b43), built on Aug 26 2013 22:05:59 by "java_re" with gcc 4.3.0 20080428 (Red Hat 4.3.0-8)
+
+time: Sun Jan 19 02:11:10 2014
+elapsed time: 0 seconds
+

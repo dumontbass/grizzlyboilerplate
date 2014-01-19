@@ -28,7 +28,7 @@ public class BarServer {
 
     public static void main(String[] args){
 
-        final int port = System.getenv("PORT") != null ? Integer.valueOf(System.getenv("PORT")) : 8081;
+        final int port = System.getenv("PORT") != null ? Integer.valueOf(System.getenv("PORT")) : 80;
         final URI baseUri = UriBuilder.fromUri("http://0.0.0.0/").port(port).build();
 
 

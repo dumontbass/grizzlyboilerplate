@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="br.org.base.Teste" duration-ms="44" started-at="2014-01-19T01:15:26Z" finished-at="2014-01-19T01:15:26Z">
+  <suite name="br.org.base.Teste" duration-ms="49" started-at="2014-01-19T02:37:24Z" finished-at="2014-01-19T02:37:24Z">
     <groups>
     </groups>
-    <test name="Command line test" duration-ms="44" started-at="2014-01-19T01:15:26Z" finished-at="2014-01-19T01:15:26Z">
+    <test name="Command line test" duration-ms="49" started-at="2014-01-19T02:37:24Z" finished-at="2014-01-19T02:37:24Z">
       <class name="br.org.base.Teste">
-        <test-method status="PASS" signature="teste()" name="teste" duration-ms="26" started-at="2014-01-19T01:15:26Z" finished-at="2014-01-19T01:15:26Z">
+        <test-method status="PASS" signature="teste()" name="teste" duration-ms="27" started-at="2014-01-19T02:37:24Z" finished-at="2014-01-19T02:37:24Z">
         </test-method>
       </class>
     </test>
