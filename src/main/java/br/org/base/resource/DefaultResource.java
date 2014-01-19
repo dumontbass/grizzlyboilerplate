@@ -37,8 +37,27 @@ public class DefaultResource {
     @Produces(MediaType.APPLICATION_JSON)
     public String findAll() {
 
+        String a = "ss";
 
-        return "jkhkjhkjhkjhkj";
+
+        for(int i=0;i<1000;i++){
+
+            for(int j=0;j<1000;j++){
+
+
+                if(i+j==i*j){
+
+                    a = i +"  "+ j;
+                }
+
+
+            
+            }
+
+        }
+
+
+        return a;
     }
 
     

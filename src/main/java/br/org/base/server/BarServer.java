@@ -24,7 +24,7 @@ public class BarServer {
 
     public static String contentUrl;
 
-    private static final String CONTENT_PATH = "/";
+    private static final String CONTENT_PATH = "";
 
     public static void main(String[] args){
 
