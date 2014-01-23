@@ -26,7 +26,7 @@ import java.util.List;
  */
 
 @Singleton
-@Path("cardapios")
+@Path("/")
 public class DefaultResource {
 
    
@@ -34,6 +34,7 @@ public class DefaultResource {
     
 
     @GET
+    @Path("cardapios")
     @Produces(MediaType.TEXT_HTML)
     public String findAll() {
 
