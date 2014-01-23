@@ -60,7 +60,7 @@ public class BarServer {
         db = "producao";
 
         MongoURI mongolabUri = new MongoURI(System.getenv("MONGOLAB_URI") != null ? System.getenv("MONGOLAB_URI") : "mongodb://127.0.0.1:27017/producao");
-        //MongoURI mongolabUri = new MongoURI(System.getenv("MONGOHQ_URL") != null ? System.getenv("MONGOHQ_URL") : "mongodb://base:1q2w3e4r@ds061268.mongolab.com:61268/heroku_app20455276");
+        
 
         Mongo m = null;
         try {
